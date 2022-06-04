@@ -28,8 +28,10 @@ EXPECTED - informed by IUCN assessments 2007-2018
 ```{r}
 
 library(tidyverse)
+library(here)
+
 #read in file - all assessments 2007-2018 cross-checked for whether they are genuine or not
-all_assess <- read.csv(here::here("ChangesInRedList","rl_status_history_2007_2018_genuine.csv"))
+all_assess <- read.csv(here::here("data", "redlist", "ChangesInRedList","rl_status_history_2007_2018_genuine.csv"))
 str(all_assess)
 
 all_assess_genuine <- all_assess %>% 

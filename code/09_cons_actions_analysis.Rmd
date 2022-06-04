@@ -17,6 +17,7 @@ rm(list = ls())
 library(tidyverse)
 library(MASS)
 library(car)
+library(here)
 
 ```
 
@@ -24,9 +25,9 @@ Broad categories of conservation action
 
 ```{r message=FALSE}
 
-act <- read.csv("data/generated/intermediate/ABS_Cons_Actions_Broad.csv") 
-
-## by eyeball, the only broad categories for which there is any difference amoung outcomes reproduction and mortality
+act <- read.csv(here("data", "generated", "ABS_Cons_Actions_Broad.csv"))
+  
+## by eyeball, the only broad categories for which there is any difference among outcomes reproduction and mortality
 tbl_human = table(act$Direction, act$human)
 chisq.test(tbl_human) 
 ## for human X-squared = 1.4667, df = 1, p-value = 0.2259 
@@ -79,7 +80,7 @@ On to the narrow categories with 15 binary predictors
 
 ```{r}
 
-narrow <- read.csv("data/generated/intermediate/ABS_Cons_Actions_Narrow.csv") %>% select_at(3:18)
+narrow <- read.csv(here("data", "generated", "ABS_Cons_Actions_Narrow.csv")) %>% select_at(3:18)
 
 narrow <- narrow %>%
   mutate_if(sapply(narrow, is.integer), as.factor) %>%
@@ -217,7 +218,7 @@ Ordinal Logistic Regression on Population Trend
 
 rm(list = ls())
 
-species <- read.csv("data/generated/9_apex_with_gen_changes.csv") %>%
+species <- read.csv(here("data", "generated", "9_apex_with_gen_changes.csv")) %>%
   dplyr::mutate(status_impr=case_when(
     Delta_Status %in% c(-4:-1) ~ "declined",
     Delta_Status == 0 ~ "unchanged",
@@ -225,9 +226,7 @@ species <- read.csv("data/generated/9_apex_with_gen_changes.csv") %>%
   dplyr::mutate(status_impr = as.factor(status_impr)) %>% 
   dplyr::select(Binomial, populationTrend, systems, Taxon, Delta_Status, status_impr)
 
-
-  
-inplace <- read.csv("data/redlist/rl_cons_inplace_2019.csv", stringsAsFactors = F) %>%
+inplace <- read.csv(here("data", "redlist", "rl_cons_inplace_2019.csv"), stringsAsFactors = F) %>%
   filter(scientificName %in% species$Binomial) %>% 
   dplyr::select(2,21,23:33)
 
@@ -277,8 +276,6 @@ ctable <- coef(summary(mod_trend, digits = 3))
 
 p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 ctable <- cbind(ctable, "p value" = p)
-
-ci <- confint(mod_trend)
 
 exp(coef(mod_trend))
 
@@ -333,7 +330,7 @@ summary(logist_trend_pos)
 logist_trend_null <- glm(trend_pos ~ 1, family=binomial(link='logit'),
                      control=glm.control(maxit=50), data=ltrend_pos)
 
-step(logist_trend_nul,
+step(logist_trend_null,
      scope = list(upper=logist_trend_pos),
              direction="both",
              test="Chisq",

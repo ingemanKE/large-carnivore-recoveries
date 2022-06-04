@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 rm(list = ls())
 
 library(tidyverse)
+library(here)
 
 ```
 
@@ -22,7 +23,7 @@ library(tidyverse)
 
 ```{r, include=FALSE}
 
-species <- read.csv("data/generated/9_apex_with_gen_changes.csv") %>%
+species <- read.csv(here("data", "generated", "9_apex_with_gen_changes.csv")) %>%
   dplyr::filter(!redlistCategory == "Data Deficient") %>% 
   dplyr::mutate(status_impr=case_when(Delta_Status %in% c(-4:-1) ~ "declined",Delta_Status == 0 ~ "unchanged", Delta_Status %in% c(1:4) ~ "improved")) %>%
   dplyr::mutate(status_impr = as.factor(status_impr)) %>% 
@@ -48,14 +49,14 @@ species <- species %>%
                             Status_impr == "improved" ~ "Improved")) %>% 
   dplyr::select(-Status_impr)
 
-write_csv(species, "data/generated/10_apex_for_analysis.csv")
+# write_csv(species, "data/generated/10_apex_for_analysis.csv")
 
 ```
 
 ### Species List and Threats Conversion Sheets
 
 ```{r}
-spp <- read.csv("data/generated/10_apex_for_analysis.csv")
+spp <- read.csv(here("data", "generated", "10_apex_for_analysis.csv"))
 
 spp.g <- spp %>% 
   group_by(Trend, System) %>% 
@@ -66,7 +67,7 @@ spp.g <- spp %>%
 spp.inc <- spp[spp$Trend == "Increasing",]
 
 
-allspp <- read.csv("data/threats/IUCN_Thr_Data_2018.csv")
+allspp <- read.csv(here("data", "threats", "IUCN_Thr_Data_2018.csv"))
   
 thr <- allspp[allspp$Binomial %in% spp$Binomial, ] # 2377 non-unique threats 
 
@@ -113,7 +114,7 @@ tog <- arrange(tog, desc(freq))
 ```{r}
 
 # call in reclassified threats with source_2019 as the new categories of threat
-cats <- read.csv("data/threats/threats_reclassified_2019.csv")
+cats <- read.csv(here("data", "threats", "threats_reclassified_2019.csv"))
 comb2 <- left_join(tog, cats, by = c("combo" = "combo_2019")) 
 full <- left_join(comb2, spp, by = "Binomial") 
 
@@ -203,7 +204,7 @@ fullest <- fuller %>%
                                 Status == "LC" ~ "N"))) %>% 
     filter(!is.na(Threatened)) 
 
-write.csv(fullest, "data/generated/11_threats.csv")
+#write.csv(fullest, "data/generated/11_threats.csv")
 
 Threat_totals <- fullest %>% 
   group_by(Threatened) %>% 
