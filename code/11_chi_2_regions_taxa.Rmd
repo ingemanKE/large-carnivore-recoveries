@@ -1,0 +1,470 @@
+---
+title: "ABS_chi_squared"
+author: "EMD"
+date: "May 9, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Chi-squared tests
+
+STATUS
+1. Do the proportions of delta_status for each *taxon* differ from expected?
+2. Do the proportions of delta_status for each *realm* differ from expected?
+
+TREND
+3. Do the proportions of population trends for each *taxon* differ from expected?
+4. Do the proportions of population trends for each *realm* differ from expected?
+
+EXPECTED - informed by IUCN assessments 2007-2018
+
+### What are the expected ratios for each taxa?
+
+#### delta_status
+
+```{r}
+
+library(tidyverse)
+#read in file - all assessments 2007-2018 cross-checked for whether they are genuine or not
+all_assess <- read.csv(here::here("ChangesInRedList","rl_status_history_2007_2018_genuine.csv"))
+str(all_assess)
+
+all_assess_genuine <- all_assess %>% 
+  #remove non-genuine changes; keep genuine and NAs (no change)
+  filter(is_geniune == "genuine" | is.na(is_geniune)) %>% 
+  #add status_impr category column
+  mutate(status_impr=case_when( 
+    Delta_Status %in% c(-4:-1) ~ "declined",
+    Delta_Status == 0 ~ "unchanged",
+    Delta_Status %in% c(1:4) ~ "improved")) %>% 
+  mutate(status_impr = as.factor(status_impr)) %>% 
+  #split mammalia into terrestrial & marine (by family)
+  mutate(Taxa = ifelse(Family %in% c("OTARIIDAE","PHOCIDAE","ODOBENIDAE","MUSTELIDAE","URSIDAE","TRICHECHIDAE","DUGONGIDAE","BALAENIDAE","CETOTHERIIDAE","BALAENOPTERIDAE","ESCHRICHTIIDAE","PHYSETERIDAE","KOGIIDAE","MONODONTIDAE","ZIPHIIDAE","DELPHINIDAE","PHOCOENIDAE"),
+                       yes = "MAR MAMMALIA",
+                       no = Class)) %>% 
+  #for some reason, taxa ends up as a number - change back to original factor
+  #here, I also combine amphibians and reptiles to be consistent with the apex data groupings
+  mutate(Taxa = case_when(Taxa == 2 | Taxa == 6 ~ "REPTAMPH",
+                           Taxa == 3 ~ "AVES",
+                           Taxa == 5 ~ "MAMMALIA",
+                          Taxa == 1 ~ "ACTINOPTERYGII",
+                          Taxa == 4 ~ "CHONDRICHTHYES",
+                          Taxa=="MAR MAMMALIA" ~ "MAR MAMMALIA"))
+
+
+#calculate proportions for each taxa
+expected_prop <- all_assess_genuine %>% 
+  group_by(Taxa) %>% 
+  #prop of declined, improved, unchanged and total
+  summarize(prop_declined = sum(status_impr== "declined",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T),
+            prop_improved = sum(status_impr== "improved",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T),
+            prop_unchanged = sum(status_impr== "unchanged",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T)) %>% 
+  mutate(Taxa = case_when(Taxa == "AVES" ~ "Birds",
+                           Taxa == "ACTINOPTERYGII" ~ "Bony",
+                           Taxa == "CHONDRICHTHYES" ~ "Elasmo",
+                          Taxa == "MAMMALIA" ~ "LandMam",
+                          Taxa == "MAR MAMMALIA" ~"MarineMam",
+                          Taxa == "REPTAMPH" ~ "ReptAmph"))
+  
+expected_prop
+
+#raw numbers & totals, to check math
+expected_num <- all_assess_genuine %>% 
+  group_by(Taxa) %>% 
+  #prop of declined, improved, unchanged and total
+  summarize(prop_declined = sum(status_impr== "declined",na.rm=T),
+            prop_improved = sum(status_impr== "improved",na.rm=T),
+            prop_unchanged = sum(status_impr== "unchanged",na.rm=T),
+            total=sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T))
+
+expected_num
+
+#all spp together - use for realm test
+expected_prop_global <- all_assess_genuine %>%
+  summarize(prop_declined = sum(status_impr== "declined",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T),
+            prop_improved = sum(status_impr== "improved",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T),
+            prop_unchanged = sum(status_impr== "unchanged",na.rm=T)/sum(status_impr == "declined" | status_impr == "improved" | status_impr =="unchanged",na.rm=T))
+
+expected_prop_global
+
+```
+
+Comprehensively assessed species only
+(for the supplement)
+https://www.iucnredlist.org/resources/summary-statistics -- see Fig. 2 caption
+
+#### population trend
+
+```{r}
+#read in file - rl_summary_2019 (contains popTrend info!)
+assess_sum <- read.csv(here::here("data","redlist/rl_summary_2019.csv"))
+str(assess_sum)
+
+assess_sum_filtered <- assess_sum %>%
+  dplyr::select(phylumName,className,orderName,familyName,genusName,scientificName,redlistCategory,populationTrend) %>% 
+  #filter taxa of interest
+  filter(className %in% c("MAMMALIA", "AVES","REPTILIA","ACTINOPTERYGII","CHONDRICHTHYES","AMPHIBIA")) %>% 
+  #remove NAs & Unknowns for popTrend
+  filter (populationTrend %in% c("Decreasing","Increasing","Stable")) %>% 
+  droplevels() %>% 
+  #split mammalia into terrestrial & marine (by family)
+  mutate(Taxa = ifelse(familyName %in% c("OTARIIDAE","PHOCIDAE","ODOBENIDAE","MUSTELIDAE","URSIDAE","TRICHECHIDAE","DUGONGIDAE","BALAENIDAE","CETOTHERIIDAE","BALAENOPTERIDAE","ESCHRICHTIIDAE","PHYSETERIDAE","KOGIIDAE","MONODONTIDAE","ZIPHIIDAE","DELPHINIDAE","PHOCOENIDAE"),
+                       yes = "MAR MAMMALIA",
+                       no = className)) %>% 
+  #for some reason, taxa ends up as a number - change back to original factor
+  #here, I also combine amphibians and reptiles to be consistent with the apex data groupings
+  mutate(Taxa = case_when(Taxa == 2 | Taxa == 6 ~ "REPTAMPH",
+                           Taxa == 3 ~ "AVES",
+                           Taxa == 5 ~ "MAMMALIA",
+                          Taxa == 1 ~ "ACTINOPTERYGII",
+                          Taxa == 4 ~ "CHONDRICHTHYES",
+                          Taxa=="MAR MAMMALIA" ~ "MAR MAMMALIA"))
+
+
+#calculate proportions for each taxa 
+expected_prop_popT <- assess_sum_filtered %>% 
+  group_by(Taxa) %>% 
+  #prop of each popTrend level
+  summarize(prop_decrease = sum(populationTrend== "Decreasing",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T),
+            prop_increase = sum(populationTrend== "Increasing",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T),
+            prop_stable = sum(populationTrend== "Stable",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T)) %>% 
+  mutate(Taxa = case_when(Taxa == "AVES" ~ "Birds",
+                           Taxa == "ACTINOPTERYGII" ~ "Bony",
+                           Taxa == "CHONDRICHTHYES" ~ "Elasmo",
+                          Taxa == "MAMMALIA" ~ "LandMam",
+                          Taxa == "MAR MAMMALIA" ~"MarineMam",
+                          Taxa == "REPTAMPH" ~ "ReptAmph"))
+
+expected_prop_popT
+
+#raw numbers, to check math
+expected_num_popT <- assess_sum_filtered %>% 
+  group_by(Taxa) %>% 
+  #prop of declined, improved, unchanged and total
+  summarize(num_decrease = sum(populationTrend== "Decreasing",na.rm=T),
+            num_increase = sum(populationTrend== "Increasing",na.rm=T),
+            num_stable = sum(populationTrend== "Stable",na.rm=T),
+            total=sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T))
+
+expected_num_popT
+
+#all spp together - use for realm test
+expected_prop_popT_global <- assess_sum_filtered %>%
+  summarize(prop_decrease = sum(populationTrend== "Decreasing",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T),
+            prop_increase = sum(populationTrend== "Increasing",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T),
+            prop_stable = sum(populationTrend== "Stable",na.rm=T)/sum(populationTrend == "Decreasing" | populationTrend == "Increasing" | populationTrend =="Stable",na.rm=T))
+
+expected_prop_popT_global
+
+```
+Comprehensively assessed species only
+(for the supplement)
+https://www.iucnredlist.org/resources/summary-statistics -- see Fig. 2 caption
+
+
+### Status
+
+#### By taxon
+```{r}
+library(tidyverse)
+library(here)
+library(MASS)
+
+#load in data and explore
+#just genuine changes
+apex_data_genuine <- read.csv(here::here("data","generated/9_apex_with_gen_changes.csv"))
+str(apex_data_genuine)
+summary(apex_data_genuine)
+
+```
+
+Re-coded delta_status as improved, unchanged, or declined (status_impr).
+```{r}
+#re-code delta_status as factor in a new column status_impr (improved, unchanged, declined)
+# i.e. -4 through -1 = declined; 0 = unchanged; 1 through 2 = improved
+
+apex_data_genuine <- apex_data_genuine %>% 
+  mutate(status_impr=case_when(
+    Delta_Status %in% c(-4:-1) ~ "declined",
+    Delta_Status == 0 ~ "unchanged",
+    Delta_Status %in% c(1:2) ~ "improved")) %>% 
+  mutate(status_impr = as.factor(status_impr)) %>% 
+  arrange(Delta_Status)
+
+```
+
+Chi-squared test of independence: significant association between status_impr and taxon?
+```{r}
+tbl_status_taxon = table(apex_data_genuine$status_impr, apex_data_genuine$Taxon)
+tbl_status_taxon
+chisq.test(tbl_status_taxon) #X-squared = 30.157, df = 10, p-value = 0.0008075
+#reject the null that status_impr is independent of taxon. Suggests association (consistent with the lit).
+
+chisq.test(tbl_status_taxon)$expected
+#some expected values are <5 so... try Fisher's exact test
+fisher.test(tbl_status_taxon,simulate.p.value = T) #p-value = 0.003498
+
+```
+
+Goodness of fit for each taxon: do the distributions differ from expected?
+```{r}
+levels(apex_data_genuine$status_impr) #"declined"  "improved"  "unchanged" 
+taxon_level <- levels(apex_data_genuine$Taxon) #"Birds","Bony","Elasmo","LandMam","MarineMam","ReptAmph"
+
+#filter by birds, as an example
+apex_birds <- apex_data_genuine %>% 
+  filter(Taxon == "Birds")
+#count number of declined, improved, unchanged
+bird.d <- sum(apex_birds$status_impr== "declined") #29
+bird.i <- sum(apex_birds$status_impr== "improved") #2
+bird.u <- sum(apex_birds$status_impr== "unchanged") #79
+#test distribution vs. expected (pulled from expected_prop table; taxa names now match apex list)
+expected_prop
+bird_chi <- chisq.test(c(bird.d,bird.i,bird.u), p = c(expected_prop$prop_declined[expected_prop$Taxa=="Birds"],expected_prop$prop_improved[expected_prop$Taxa=="Birds"],expected_prop$prop_unchanged[expected_prop$Taxa=="Birds"])) #X-squared = 67.534, df = 2, p-value = 2.164e-15
+bird_chi
+bird_chi$expected
+#some expected values <5
+chisq.test(c(bird.d,bird.i,bird.u), p = c(expected_prop$prop_declined[expected_prop$Taxa=="Birds"],expected_prop$prop_improved[expected_prop$Taxa=="Birds"],expected_prop$prop_unchanged[expected_prop$Taxa=="Birds"]),simulate.p.value = T)
+#X-squared = 67.534, df = NA, p-value = 0.0004998
+
+
+#for loop saves the day
+for(taxa in taxon_level){
+  filtered <- subset(apex_data_genuine,Taxon == taxa)
+  d <- sum(filtered$status_impr== "declined")
+  i <- sum(filtered$status_impr== "improved")
+  u <- sum(filtered$status_impr== "unchanged")
+  print(taxa)
+  print(c("Declined",d)) #observed
+  print(c("Improved",i)) #observed
+  print(c("Unchanged",u)) #observed
+  #pull expected values from expected_prop table
+  print(chisq.test(c(d,i,u), p = c(expected_prop$prop_declined[expected_prop$Taxa==taxa],expected_prop$prop_improved[expected_prop$Taxa==taxa],expected_prop$prop_unchanged[expected_prop$Taxa==taxa])))
+  print(chisq.test(c(d,i,u), p = c(expected_prop$prop_declined[expected_prop$Taxa==taxa],expected_prop$prop_improved[expected_prop$Taxa==taxa],expected_prop$prop_unchanged[expected_prop$Taxa==taxa]))$expected) #should be >5
+  print("Simulated p-values")
+  print(chisq.test(c(d,i,u), p = c(expected_prop$prop_declined[expected_prop$Taxa==taxa],expected_prop$prop_improved[expected_prop$Taxa==taxa],expected_prop$prop_unchanged[expected_prop$Taxa==taxa]),simulate.p.value = T)) #if expected <5, use this
+}
+
+#Getting error for elasmo (NA p-value due to 0s?) - re-run by hand
+apex_elasmo <- apex_data_genuine %>% 
+  filter(Taxon == "Elasmo")
+#count number of declined, improved, unchanged
+elasmo.d <- sum(apex_elasmo$status_impr== "declined") #0
+elasmo.i <- sum(apex_elasmo$status_impr== "improved") #1
+elasmo.u <- sum(apex_elasmo$status_impr== "unchanged") #46
+#test distribution vs. expected (pulled from expected_prop table; taxa names now match apex list)
+#change expected for prop_declined and prop_improved from 0 to really low value
+elasmo_chi <- chisq.test(c(elasmo.d,elasmo.i,elasmo.u), p = c(0.00000001,0.00000001,0.99999998)) 
+elasmo_chi
+elasmo_chi$expected #some expected values <5
+chisq.test(c(elasmo.d,elasmo.i,elasmo.u), p = c(0.00000001,0.00000001,0.99999998),simulate.p.value = T)
+#X-squared = 2127700, df = NA, p-value = 0.0004998
+
+```
+
+#### By realm
+
+Note: the realm_data csv has 555 species in it whereas the 9_apex_with_gen_changes data frame only has 364. Here, I treated the 9_apex_with_gen_changes data frame as the final list. Looks like we're missing data for 34 species.
+
+```{r}
+#read in realm data
+realm_data <- read.csv(here::here("data","generated/realm_data.csv"))
+str(realm_data)
+
+#now I need to add status_impr variable to this data frame
+realm_data_short <- realm_data %>% 
+  dplyr::select(scientific_name,realm_type,realm) %>% 
+  rename(Binomial=scientific_name) 
+  
+apex_joined <- left_join(apex_data_genuine,realm_data_short) %>%  #longform so there is a row for each spp-realm combo
+  mutate(Binomial = as_factor(Binomial))
+str(apex_joined) #all spp present (364)
+summary(apex_joined) #34 NAs
+
+#omit freshwater realms and drop fw levels (after discussing with Kurt)
+#instead, freshwater species have an associated terrestrial realm classification (see realm_data)
+apex_joined_no_fw <- apex_joined %>%
+ subset(realm_type != "Freshwater") %>% 
+  droplevels()
+
+summary(apex_joined_no_fw)
+str(apex_joined_no_fw) #249 species, so some are missing
+levels(apex_joined_no_fw$realm) #confirm that fw levels have been dropped 
+
+```
+
+Running the chi-squared tests
+Note: Since the data frame is longform, some species are counted multiple times if found across more than one realm.
+
+Chi-squared test of independence: significant association between status_impr and realm?
+```{r}
+tbl_status_realm = table(apex_joined_no_fw$status_impr, apex_joined_no_fw$realm)
+tbl_status_realm
+chisq.test(tbl_status_realm) 
+
+chisq.test(tbl_status_realm)$expected #some expected values <5, so run Fisher's exact test
+fisher.test(tbl_status_realm, simulate.p.value = T) #p-value = 0.004998
+
+```
+
+Goodness of fit for each realm: do the distributions differ from expected?
+```{r}
+#expected ratios are now drawn from all assessment data
+
+levels(apex_joined_no_fw$status_impr) #"declined"  "improved"  "unchanged" 
+realm_level <- levels(apex_joined_no_fw$realm) 
+length(realm_level) #16 realms (rather than 29 with fw included)
+
+#for loop
+for(r in realm_level){
+  filtered <- subset(apex_joined_no_fw,realm == r)
+  d <- sum(filtered$status_impr== "declined")
+  i <- sum(filtered$status_impr== "improved")
+  u <- sum(filtered$status_impr== "unchanged")
+  print(r)
+  print(c("Declined",d))
+  print(c("Improved",i))
+  print(c("Unchanged",u))
+  print(chisq.test(c(d,i,u), p = c(expected_prop_global$prop_declined,expected_prop_global$prop_improved,expected_prop_global$prop_unchanged))) #equal distribution for geo
+  print(chisq.test(c(d,i,u), p = c(expected_prop_global$prop_declined,expected_prop_global$prop_improved,expected_prop_global$prop_unchanged))$expected)
+  print("Simulated p-values")
+  print(chisq.test(c(d,i,u), p = c(expected_prop_global$prop_declined,expected_prop_global$prop_improved,expected_prop_global$prop_unchanged),simulate.p.value = T)) #if expected <5, use this
+}
+
+
+#check one realm by hand - matches
+apex_palearctic <- apex_joined_no_fw %>% 
+  filter(realm == "Palearctic")
+#count number of declined, improved, unchanged
+palearctic.d <- sum(apex_palearctic$status_impr== "declined") #11
+palearctic.i <- sum(apex_palearctic$status_impr== "improved") #2
+palearctic.u <- sum(apex_palearctic$status_impr== "unchanged") #81
+#test distribution vs. expected
+chisq.test(c(palearctic.d,palearctic.i,palearctic.u), p = c(expected_prop_global$prop_declined,expected_prop_global$prop_improved,expected_prop_global$prop_unchanged)) 
+#X-squared = 172.51, df = 2, p-value < 2.2e-16
+
+
+```
+
+*A note on test assumptions* 
+Expected values for several realms are <5 thus chi-squared approximation may not be correct (one stats website suggested used 2.5 as a cut-off;
+https://support.minitab.com/en-us/minitab/18/help-and-how-to/statistics/tables/supporting-topics/chi-square/are-the-results-of-my-chi-square-test-invalid/). Simulating p-values was suggested as a solution. There's also mention of an exact test for goodness of fit, but I'm unable to find suitable r code or recent descriptions of folks using this.
+
+### Population trends
+
+Modified above code for populationTrend variable
+
+```{r}
+#remove unknown population trends
+apex_data_genuine <- apex_data_genuine %>% 
+  filter (populationTrend %in% c("Decreasing","Increasing","Stable")) %>% 
+  droplevels()
+
+```
+
+
+#### By taxon
+
+Chi-squared test of independence: significant association between populationTrend and taxon?
+```{r}
+tbl_trend_taxon = table(apex_data_genuine$populationTrend, apex_data_genuine$Taxon)
+tbl_trend_taxon
+chisq.test(tbl_trend_taxon) #X-squared = 61.893, df = 10, p-value = 1.586e-09
+#reject the null that populationTrend is independent of taxon. Suggests association (consistent with the lit).
+fisher.test(tbl_trend_taxon,simulate.p.value = T) #p-value = 0.0004998
+
+```
+
+Goodness of fit for each taxon: do the distributions differ from expected?
+```{r}
+levels(apex_data_genuine$populationTrend) #"Decreasing" "Increasing" "Stable" 
+taxon_level <- levels(apex_data_genuine$Taxon) #"Birds","Bony","Elasmo","LandMam","MarineMam","ReptAmph" 
+expected_prop_popT #expected
+
+#for loop
+for(taxa in taxon_level){
+  filtered <- subset(apex_data_genuine,Taxon == taxa)
+  d <- sum(filtered$populationTrend== "Decreasing")
+  i <- sum(filtered$populationTrend== "Increasing")
+  s <- sum(filtered$populationTrend== "Stable")
+  print(taxa)
+  print(c("Decreasing",d))
+  print(c("Increasing",i))
+  print(c("Stable",s))
+  #pull from expected_prop_popT table
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT$prop_decrease[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_increase[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_stable[expected_prop_popT$Taxa==taxa])))
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT$prop_decrease[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_increase[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_stable[expected_prop_popT$Taxa==taxa]))$expected)
+  print("Simulated p-values")
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT$prop_decrease[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_increase[expected_prop_popT$Taxa==taxa],expected_prop_popT$prop_stable[expected_prop_popT$Taxa==taxa]),simulate.p.value = T))
+}
+
+#hand check one (birds)
+apex_birds <- apex_data_genuine %>% 
+  filter(Taxon == "Birds")
+#count number of declined, improved, unchanged
+bird.d.trend <- sum(apex_birds$populationTrend== "Decreasing") #65
+bird.i.trend <- sum(apex_birds$populationTrend== "Increasing") #14
+bird.s.trend <- sum(apex_birds$populationTrend== "Stable") #30
+#test distribution vs. expected
+chisq.test(c(bird.d.trend,bird.i.trend,bird.s.trend), p = c(expected_prop_popT$prop_decrease[expected_prop_popT$Taxa=="Birds"],expected_prop_popT$prop_increase[expected_prop_popT$Taxa=="Birds"],expected_prop_popT$prop_stable[expected_prop_popT$Taxa=="Birds"])) 
+#X-squared = 2.5757, df = 2, p-value = 0.2759
+
+
+```
+
+#### By realm
+
+Chi-squared test of independence: significant association between populationTrend and realm?
+```{r}
+apex_joined_no_fw <- apex_joined_no_fw %>% 
+  filter (populationTrend %in% c("Decreasing","Increasing","Stable")) %>% 
+  droplevels()
+
+tbl_trend_realm = table(apex_joined_no_fw$populationTrend, apex_joined_no_fw$realm)
+tbl_trend_realm
+chisq.test(tbl_trend_realm) #X-squared = 86.688, df = 30, p-value = 2.068e-07
+#reject null hypothesis that populationTrend is independent of realm (same conclusion as with fw)
+
+fisher.test(tbl_trend_realm,simulate.p.value = T) #p-value = 0.0004998
+```
+
+Goodness of fit for each realm: do the distributions differ from expected?
+```{r}
+#expected ratios are now drawn from all assessment data
+
+levels(apex_joined_no_fw$populationTrend) 
+realm_level <- levels(apex_joined_no_fw$realm) 
+
+#for loop
+for(r in realm_level){
+  filtered <- subset(apex_joined_no_fw,realm == r)
+  d <- sum(filtered$populationTrend== "Decreasing")
+  i <- sum(filtered$populationTrend== "Increasing")
+  s <- sum(filtered$populationTrend== "Stable")
+  print(r)
+  print(c("Decreasing",d))
+  print(c("Increasing",i))
+  print(c("Stable",s))
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT_global$prop_decrease,expected_prop_popT_global$prop_increase,expected_prop_popT_global$prop_stable))) #equal distribution for geo
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT_global$prop_decrease,expected_prop_popT_global$prop_increase,expected_prop_popT_global$prop_stable))$expected) #expected values; should be above 5
+  print("Simulated p-values")
+  print(chisq.test(c(d,i,s), p = c(expected_prop_popT_global$prop_decrease,expected_prop_popT_global$prop_increase,expected_prop_popT_global$prop_stable),simulate.p.value = T))
+}
+
+#check one realm by hand - matches
+apex_palearctic <- apex_joined_no_fw %>% 
+  filter(realm == "Palearctic")
+#count number of declined, improved, unchanged
+palearctic.d <- sum(apex_palearctic$populationTrend== "Decreasing") 
+palearctic.i <- sum(apex_palearctic$populationTrend== "Increasing") 
+palearctic.s <- sum(apex_palearctic$populationTrend== "Stable") 
+#test distribution vs. expected
+chi <- chisq.test(c(palearctic.d,palearctic.i,palearctic.s), p = c(expected_prop_popT_global$prop_decrease,expected_prop_popT_global$prop_increase,expected_prop_popT_global$prop_stable)) 
+chi #X-squared = 34.978, df = 2, p-value = 2.539e-08
+chi$expected 
+chi$observed 
+
+```

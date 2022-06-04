@@ -1,0 +1,539 @@
+---
+title: "Threats Analysis"
+author: "Kurt Ingeman"
+date: "7/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Threats Analysis updated for final species list
+
+```{r message=FALSE}
+rm(list = ls())
+
+library(tidyverse)
+
+```
+
+### Clean up data sheet
+
+```{r, include=FALSE}
+
+species <- read.csv("data/generated/9_apex_with_gen_changes.csv") %>%
+  dplyr::filter(!redlistCategory == "Data Deficient") %>% 
+  dplyr::mutate(status_impr=case_when(Delta_Status %in% c(-4:-1) ~ "declined",Delta_Status == 0 ~ "unchanged", Delta_Status %in% c(1:4) ~ "improved")) %>%
+  dplyr::mutate(status_impr = as.factor(status_impr)) %>% 
+  dplyr::select(-c(Most_Recent_Change))
+
+species <- species %>% 
+  mutate(Status = case_when(redlistCategory == "Critically Endangered" ~ "CR",
+                            redlistCategory == "Endangered" ~ "EN",
+                            redlistCategory == "Vulnerable" ~ "VU",
+                            redlistCategory == "Near Threatened" ~ "NT",
+                            redlistCategory == "Least Concern" ~ "LC"))
+
+species <- species %>% 
+  dplyr::select(-c(is_geniune, redlistCategory)) %>% 
+  rename(Trend = populationTrend) %>% 
+  rename(System = systems) %>% 
+  rename(Status_impr = status_impr) %>% 
+  dplyr::select(Binomial, Common, Status, Trend, everything())
+  
+species <- species %>% 
+    mutate(Status_Impr = case_when(Status_impr == "unchanged" ~ "Unchanged",
+                            Status_impr == "declined" ~ "Declined",
+                            Status_impr == "improved" ~ "Improved")) %>% 
+  dplyr::select(-Status_impr)
+
+write_csv(species, "data/generated/10_apex_for_analysis.csv")
+
+```
+
+### Species List and Threats Conversion Sheets
+
+```{r}
+spp <- read.csv("data/generated/10_apex_for_analysis.csv")
+
+spp.g <- spp %>% 
+  group_by(Trend, System) %>% 
+  summarise(n = n()) %>% 
+  mutate(Percent = 100*(n / sum(n))) %>% 
+  arrange(System,desc(Percent))
+
+spp.inc <- spp[spp$Trend == "Increasing",]
+
+
+allspp <- read.csv("data/threats/IUCN_Thr_Data_2018.csv")
+  
+thr <- allspp[allspp$Binomial %in% spp$Binomial, ] # 2377 non-unique threats 
+
+length(unique(thr$Binomial)) # 363
+## missing 2 species, Python reticulatus,  Apodora papuana
+
+length(unique(thr$Threat.Code)) # 84 Threats
+length(unique(thr$Stress.Code)) #10 Stresses
+
+thr$combo <- paste(thr$Threat.Code, thr$Stress.Code)
+head(thr)
+length(unique(thr$combo)) # 350 unique combos and no longer missing bony fish, 
+# turned out to include some first level codes...actual length below
+# thr.str <- as.data.frame(unique(thr$combo), col.names = "combo")
+# nocombo <- thr[thr$combo==" ",] 
+# length(unique(nocombo$Binomial)) # 76 species with no threats listed
+
+## Check a couple
+## thr[thr$Binomial=="Buteo augur",] yep, no threats
+
+## 363 - 76 = 287 species with threats listed
+
+# write.csv(thr.str, file = "data/threats/thr_combo_2019.csv")
+
+str(thr)
+thr.g <- group_by(thr, Threat.Code) 
+num.thr <- summarise(thr.g, n = n())
+as.data.frame(num.thr)
+prop.thr <- mutate(num.thr, freq = n / sum(n)) # 
+
+# combine grouped and summarized with frequency back into the thr df
+tog <- left_join(thr, prop.thr, by = "Threat.Code")
+# reorder df by frequency of threat
+tog <- arrange(tog, desc(freq))
+
+# p <-  ggplot(tog) 
+# p + aes(y=n, x=reorder(Threat.Code, -n)) + 
+#  geom_bar(stat = "identity") 
+
+```
+ 
+ ### Turn threats into useful categories and combine with other variables
+ 
+```{r}
+
+# call in reclassified threats with source_2019 as the new categories of threat
+cats <- read.csv("data/threats/threats_reclassified_2019.csv")
+comb2 <- left_join(tog, cats, by = c("combo" = "combo_2019")) 
+full <- left_join(comb2, spp, by = "Binomial") 
+
+## clean up the data frame with threats listed
+
+full <- full %>% 
+  dplyr::select(Binomial, Common, Status, Trend, System, Taxon, combo, Delta_Status, Status_Impr, source_2019)  
+
+length(unique(full$source_2019)) # 24 sources
+
+## Since more than one threat/stress combo map onto the same source, a single species could be listed more than once for the same source. Should a single species with 2 combos that both reclasify to a single threat be counted twice? Probably not.
+
+full <- full %>% 
+  group_by(Binomial) %>% 
+  distinct(source_2019, .keep_all = TRUE) %>% 
+  ungroup() ## removed and it changes the most common threat from ag to fishing
+
+## now remove source = NA and get summary stats
+full <- full %>% 
+  filter(!is.na(source_2019))
+
+length(unique(full$Binomial)) # we have threats for 287 of 365 species
+length(unique(full$source_2019)) # 23 of our threats have at least one species that comes up  
+
+common <- full %>% 
+  group_by(source_2019) %>%
+    summarise(source.count = n()) %>%
+      mutate(source.freq = 100*(source.count / sum(source.count))) %>% arrange(desc(source.freq))
+
+# 1 Fishing	149	12.67006803
+# 2	Bycatch	142	12.07482993
+# 3	Agriculture	108	9.18367347
+# 4	Hunting	93	7.90816327
+# 5	Disease	74	6.29251701
+# 6	Development	69	5.86734694
+# ...
+# 19	Conflict	11	0.93537415
+# 20	Aquaculture	9	0.76530612
+# 21	Fire	9	0.76530612
+# 22	Other Threats	5	0.42517007
+# 23	Geological
+
+fuller <- left_join(full, common, by = "source_2019")
+
+```
+
+### Upshot of our threats (source) mapped onto new species list: 287 species show 22 (plus other) threats that range in terms of the number of species affected from 149 fishing to 1 Geological
+-- 
+### First pass at which threats are associated with worse outcomes. Which threats are associated with low status? Which threats have the highest proportion of species declined status and which for decreasing trend?
+
+```{r}
+Status_Threats <- fuller %>% 
+  mutate(Num_Risk = as.numeric(case_when(Status == "CR" ~ 5,
+                                Status == "EN" ~ 4,
+                                Status == "VU" ~ 3,
+                                Status == "NT" ~ 2,
+                                Status == "LC" ~ 1))) %>% 
+  group_by(source_2019) %>% 
+  summarize(Ave_Risk = mean(Num_Risk, na.rm=TRUE)) %>% 
+  arrange(desc(Ave_Risk))
+
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+# Which threats are associated with highest average extinction risk (status) of affected species?
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+
+#	[Ignore] Geological	4.000000
+#	Ecosystem Modification	3.500000
+#	Conflict	3.272727
+#	Human Intrusion	3.250000
+#	Aquaculture	3.000000
+#	Other Threats	3.000000
+#	Species Introductions	2.852941
+#	Hydrological 	2.828571
+#	Hunting	2.806452
+#	Agriculture	2.787037
+#	Persecution	2.771429
+
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+# Which threats are associated with likelihood of affected species being threatened (CR, EN, VU)?
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+
+fullest <- fuller %>% 
+   mutate(Threatened = (case_when(Status == "CR" ~ "Y",
+                                Status == "EN" ~ "Y",
+                                Status == "VU" ~ "Y",
+                                Status == "NT" ~ "N",
+                                Status == "LC" ~ "N"))) %>% 
+    filter(!is.na(Threatened)) 
+
+write.csv(fullest, "data/generated/11_threats.csv")
+
+Threat_totals <- fullest %>% 
+  group_by(Threatened) %>% 
+  summarise(Tot = n()) 
+
+fullest <- left_join(fullest, Threat_totals, by = "Threatened")
+
+Threat_props <- fullest %>% 
+  group_by(Threatened, source_2019) %>% 
+  summarise(n = n())
+
+fullest <- left_join(fullest, Threat_props, by = c("source_2019","Threatened"))
+
+fullest <- fullest %>% 
+  mutate(prop = n / Tot)
+
+
+Threatened_Threats <- fullest %>% 
+  group_by(source_2019, Threatened) %>% 
+  summarise(n = n()) %>% 
+  mutate(Prop_Threatened = n / sum(n)) %>% 
+  arrange(desc(Threatened), desc(Prop_Threatened))
+
+# 1	[ignore ]Geological	Y	1	1.000000000
+# 2	Conflict	Y	10	0.909090909
+# 3	Ecosystem Modification	Y	14	0.777777778
+# 4	Human Intrusion	Y	12	0.750000000
+# 5	Aquaculture	Y	6	0.666666667
+# 6	Other Threats	Y	3	0.600000000
+# 7	Transportation	Y	35	0.593220339
+# 8	Species Introductions	Y	20	0.588235294
+# 9	Recreation	Y	21	0.583333333
+# 10	Persecution	Y	20	0.571428571
+
+Decl_Threats <- fuller %>% 
+  group_by(source_2019, Status_Impr) %>% 
+  summarise(n = n()) %>% 
+  mutate(Prop_Status_Change = n / sum(n)) %>% 
+  arrange(desc(Status_Impr), desc(Prop_Status_Change))
+  
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+# Which threats have the highest proportion of affected species that have declined in status over time?
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+
+# Geologic (1) 1.000 Ignore or combine
+# Ecosystem Modification	(5)	0.2778
+# Human Intrusion		(3)	0.1875
+# Livestock  (9)	0.1875
+# Transportation (11) 0.1864
+# Energy (6) 0.1607
+# Hunting (14) 0.1505
+# Hydrological (5) 0.1429
+#	Agriculture		(15)	0.13888889
+#	Recreation		(5)	0.13888889
+
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+# Which threats have the highest proportion of affected species that have a decreasing trend?
+###### ###### ###### ###### ###### ###### ###### ###### ###### ###### 
+
+Decr_Trend  <- fuller %>% 
+  group_by(source_2019, Trend) %>% 
+  summarise(n = n()) %>% 
+  mutate(Prop_Trend = n / sum(n)) %>% 
+  arrange(desc(Trend), desc(Prop_Trend))
+
+#	  Geological	(1)	1.00000000
+#		Conflict		(10)	0.90909091
+#		Aquaculture		(7)	0.77777778
+#		Timber		(45)	0.76271186
+#		Human Intrusion		(11)	0.68750000
+#		Livestock		(33)	0.68750000
+#		Ecosystem Modification	(12)	0.66666667
+#		Fire		(6)	0.66666667
+#		Hunting		(62)	0.66666667
+#		Hydrological 	(23)	0.65714286
+
+```
+
+### These may be telling us diffferent things in terms of the timeline: while threats associated with low status (Eco Modif + Conflict + Human Intrusion) or with change in status (Modif + Intrusion + Livestock) are long-term, those associated with decreasing pop trend are more emerging (Conflict, Aquaculture, Timber)
+
+---
+# Now on to the statistical tests of threats associated with bad outcomes
+
+### Need to melt into wide format with all the conservation actions as a different columns
+
+```{r}
+## Long to Wide format
+
+Long_Threats <- fuller %>% 
+  dplyr::select(-c(combo, source.count, source.freq)) %>% 
+  mutate(yesno = 1) %>%
+  distinct() %>% 
+  spread(source_2019, yesno, fill = 0) 
+
+## Clean up var names
+Long_Threats <- Long_Threats %>% 
+  rename(Climate = `Climate Change`) %>% 
+  rename(EcoMod = `Ecosystem Modification`) %>%
+  rename(Intrusion = `Human Intrusion`) %>% 
+  rename(Other = `Other Threats`) %>% 
+  rename(Introduction = `Species Introductions`) %>% 
+  rename(Hydro = `Hydrological `)
+
+## And add variables that isolate the negative outcomes that we will associate with threats
+
+Long_Threats <- Long_Threats %>% 
+  mutate(Trend_Decr = case_when(Trend == "Increasing" ~ 0, 
+                               Trend == "Stable" ~ 0,
+                               Trend == "Decreasing" ~ 1)) %>%
+  mutate(Status_Decl = case_when(Status_Impr == "Unchanged" ~ 0, 
+                               Status_Impr == "Improved" ~ 0,
+                               Status_Impr == "Declined" ~ 1))
+
+```
+
+Binary logistic regression to see which threats are associated with negative outcomes
+
+```{r}
+## Just the relavent variables
+Long_Trend <- Long_Threats %>% 
+  dplyr::select(9:32) %>% 
+  dplyr::select(-Geological) 
+
+## Rich model
+mod_decr <- glm(Trend_Decr ~ ., family = binomial(link='logit'), data=Long_Trend)
+
+summary(mod_decr)
+
+## With everything in model, threats associated with Decreasing Trend are:
+# Conflict
+# Fishing
+# Timber
+
+## With reduced likelihood of Decreasing Trend
+# Pollution
+# Energy
+
+## Time for some model selection
+## Null Model
+mod_null = glm(Trend_Decr ~ 1, 
+                 data=Long_Trend,
+                 family = binomial(link="logit"))
+
+## Stepwise model selection
+step(mod_null,
+     scope = list(upper=mod_decr),
+             direction="both",
+             test="Chisq",
+             data=Long_Trend)
+
+## Last model where adding a variable showed a sig LRT
+mod_sel <- glm(formula = Trend_Decr ~ Pollution + Hydro + Energy + Conflict + Fishing + Timber, 
+               family = binomial(link = "logit"), 
+               data = Long_Trend)
+
+summary(mod_sel)
+coefs <- exp(coef(mod_sel))
+ints <- exp(confint(mod_sel))
+Threats_Tab <- cbind(coefs,ints)
+```
+
+## THREATS ASSOCIATED WITH DECREASING POP TREND 
+
+### Conflict increases the odds of Decreasing 8.3 times (1.29 - 170)
+## (African Land Mams: big cats and wild dogs)
+
+### Hydro increases the odds of Decreasing 3.6 times (1.17 - 14.2)
+## Freshwater and African land mams?
+
+### Fishing and Timber increase the odds 2.47 and 2.8 times, resp.
+
+
+## On to THREATS ASSOCIATED WITH DECLINED STATUS 
+```{r}
+
+Long_Status <- Long_Threats %>% 
+  dplyr::select(9:31,33) %>% 
+  dplyr::select(-Geological) 
+
+mod_decl <- glm(Status_Decl ~ ., family = binomial(link='logit'), data=Long_Status)
+
+summary(mod_decl)
+## Hydro and Ecosystem Mod associated with Decline in Status
+## Timber with reduced odds
+
+## Best perfoming model
+mod_nul <- glm(Status_Decl ~ 1, family = binomial(link='logit'), data=Long_Status)
+
+step(mod_nul,
+     scope = list(upper=mod_decl),
+             direction="both",
+             test="Chisq",
+             data=Long_Status)
+
+mod_sel_decl <- glm(formula = Status_Decl ~ Transportation  + Agriculture + Timber + EcoMod + Development, 
+                    family = binomial(link = "logit"), 
+                    data = Long_Status)
+
+summary(mod_sel_decl)
+coefs <- exp(coef(mod_sel_decl))
+ints <- exp(confint(mod_sel_decl))
+Status_Change_Tab <- cbind(coefs,ints)
+
+ #                  coefs      2.5 %      97.5 %
+# (Intercept)    0.04162219 0.01777572  0.08331344
+                     
+# EcoMod         4.72513490 1.17370872 17.82395585
+# Transportation 4.14963652 1.49152415 11.53165282
+# Agriculture    3.75645864 1.35165753 10.83403742
+
+```
+
+## THREATS ASSOCIATED WITH DECLINED STATUS 
+
+### EcoMod increases the odds of Status Decline 4.7 times (1.17 - 17.8)
+
+### Transpo increases the odds of Decline 4.2 times (1.5 - 11.5)
+## (African land mams, old world vultures, Asian freshwater, Right Whales)
+
+### Agriculture increases the odds Decline 3.8 times (1.4 - 10.8)
+
+## On to THREATS ASSOCIATED WITH BEING THREATENED 
+```{r}
+
+Threatened <- fuller %>% 
+  mutate(Threatened = (case_when(Status == "CR" ~ 1,
+                                Status == "EN" ~ 1,
+                                Status == "VU" ~ 1,
+                                Status == "NT" ~ 0,
+                                Status == "LC" ~ 0)))
+
+Long_Threatened <- Threatened %>% 
+  dplyr::select(-c(combo, source.count, source.freq)) %>% 
+  mutate(yesno = 1) %>%
+  distinct() %>% 
+  spread(source_2019, yesno, fill = 0) 
+
+Long_Threatened <- Long_Threatened %>% 
+  rename(Climate = `Climate Change`) %>% 
+  rename(EcoMod = `Ecosystem Modification`) %>%
+  rename(Intrusion = `Human Intrusion`) %>% 
+  rename(Other = `Other Threats`) %>% 
+  rename(Introduction = `Species Introductions`) %>% 
+  rename(Hydro = `Hydrological `)
+
+Long_Threatened <- Long_Threatened %>% 
+  dplyr::select(9:32) %>% 
+  dplyr::select(-Geological) 
+
+mod_thr <- glm(Threatened ~ ., family = binomial(link='logit'), data=Long_Threatened)
+
+summary(mod_thr)
+
+## Climate, Conflict, EcoMod, Fishing, Intrusion, Hunting associated with being threatened
+
+mod_nu <- glm(Threatened ~ 1, family = binomial(link='logit'), data=Long_Threatened)
+
+step(mod_nu,
+     scope = list(upper=mod_thr),
+             direction="both",
+             test="Chisq",
+             data=Long_Threatened)
+
+## Best Performing Model
+mod_sel_thr <- glm(formula = Threatened ~ Conflict + EcoMod + Climate + Intrusion + Fire + Transportation + Pollution + Fishing + Agriculture + Introduction, 
+                   family = binomial(link = "logit"), 
+                   data = Long_Threatened)
+
+summary(mod_sel_thr)
+coefs <- exp(coef(mod_sel_thr))
+ints <- exp(confint(mod_sel_thr))
+Threatened_Tab <- cbind(coefs,ints)
+
+#                   coefs      2.5 %      97.5 %
+
+#Conflict       20.0197458 2.75357020 483.4521264
+#EcoMod          4.1774817 1.16525871  18.5779881
+#Intrusion       4.1342554 1.15271929  18.7110602
+
+#######  WEAK  ##### 
+#Fishing         2.1232720 1.19537601   3.8537925
+#Agriculture     1.8971762 1.02341049   3.5602360
+
+```
+
+### Ultimate Upshot
+
+## Major common denominator of negative outcomes Ecosystem modification
+## (High Ave Extinction risk, Being threatened, Status Decl). Ongoing declines and little recovery without habitat. Lines up (weakly with having conservation sites identified). One would think parks but maybe not enforced effectively. 
+
+## Negative outcomes like decreasing trend and being threatened are associated with the absence of good governance that occurs in conflict zones. Lines up with Cons Actions that National and Internation Legislation (both positive metrics) is key to improvements and that Harvest plans in place --> (Improved Status) 
+
+######################################################################
+######################################################################
+######################################################################
+
+Calculate and Plot the Proportions / Percents of outcomes for each threat
+
+```{r}
+
+Threat_plot <- Threatened_Threats %>% 
+  filter(Threatened == "Y") %>% 
+  filter(n > 5) %>% 
+  filter(!is.na(source_2019)) %>% 
+  mutate(thr_per = 100 * Prop_Threatened) %>% 
+  mutate(not_per = 100 - thr_per) %>% 
+  arrange(desc(thr_per))
+
+Threat_plot$order <- 1:nrow(Threat_plot)
+
+Thr_not <- Threat_plot %>% 
+  dplyr::select(source_2019, not_per, order) %>% 
+  mutate(Threatened = "N") %>% 
+  rename(Percent = not_per)
+
+Threat_plot <- Threat_plot %>% dplyr::select(source_2019, thr_per, order, Threatened) %>% 
+  rename(Percent = thr_per)
+
+Threat_plot <- bind_rows(Threat_plot,Thr_not)
+  
+ggplot(data = Threat_plot, aes(x = reorder(source_2019, order), y = Percent,fill = Threatened)) +
+geom_bar(stat = "identity", color = "#56B4E9", width = 0.8) +
+  scale_fill_manual(values = c("white", "#56B4E9")) +
+ theme_bw() +
+  theme(axis.text.x=element_text(angle=45,vjust=1,hjust=1)) +
+  ylab("Frequency") +
+  theme(plot.margin = margin(0, 1, 0, 1.5, "cm")) +
+  xlab("Threat Source") +
+  theme(strip.text.x = element_blank(), strip.background = element_blank())
+
+
+```
+

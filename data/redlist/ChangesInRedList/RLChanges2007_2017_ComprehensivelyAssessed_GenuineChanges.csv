@@ -1,0 +1,440 @@
+"species","common_name","reason_for_change","class","previous_category","current_category","previous_year","current_year"
+"Cephalophus spadix","Abbott’s Duiker","G","MAMMALS","VU","EN",2006,2007
+"Gazella spekei","Speke’s Gazelle","G","MAMMALS","VU","EN",2006,2007
+"Gorilla gorilla","Western Gorilla","G","MAMMALS","EN","CR",2006,2007
+"Lipotes vexillifer","Baiji","G","MAMMALS","CR","CR",2006,2007
+"Procapra picticaudata","Tibetan Gazelle","G","MAMMALS","LC","NT",2006,2007
+"Branta ruficollis","Red-breasted Goose","G","BIRDS","VU","EN",2006,2007
+"Charadrius sanctaehelenae","St Helena Plover","G","BIRDS","VU","CR",2006,2007
+"Houbaropsis bengalensis","Bengal Florican","G","BIRDS","EN","CR",2006,2007
+"Neophron percnopterus","Egyptian Vulture","G","BIRDS","LC","EN",2006,2007
+"Phoebastria irrorata","Waved Albatross","G","BIRDS","VU","CR",2006,2007
+"Psittacula eques","Mauritius Parakeet","G","BIRDS","CR","EN",2006,2007
+"Sarcogyps calvus","Red-headed Vulture","G","BIRDS","LC","VU",2006,2007
+"Gulo gulo","Wolverine","G","MAMMALS","VU","NT",2007,2008
+"Mustela nigripes","Black-footed Ferret","G","MAMMALS","EW","EN",2007,2008
+"Arctocephalus philippii","Juan Fernández Fur Seal","G","MAMMALS","VU","NT",2007,2008
+"Arctocephalus townsendi","Guadalupe Fur Seal","G","MAMMALS","VU","NT",2007,2008
+"Balaena mysticetus","Bowhead Whale","G","MAMMALS","LR/cd","LC",2007,2008
+"Eubalaena australis","Southern Right Whale","G","MAMMALS","LR/cd","LC",2007,2008
+"Megaptera novaeangliae","Humpback Whale","G","MAMMALS","VU","LC",2007,2008
+"Bison bonasus","European Bison","G","MAMMALS","EN","VU",2007,2008
+"Capra pyrenaica","Spanish Ibex","G","MAMMALS","LR/nt","LC",2007,2008
+"Capra walie","Walia Ibex","G","MAMMALS","CR","EN",2007,2008
+"Procapra przewalskii","Przewalski's Gazelle","G","MAMMALS","CR","EN",2007,2008
+"Rupicapra pyrenaica","Pyrenean Chamoix","G","MAMMALS","LR/cd","LC",2007,2008
+"Eschrichtius robustus","Gray Whale","G","MAMMALS","LR/cd","LC",2007,2008
+"Pteropus dasymallus","Ryukyu Flying Fox","G","MAMMALS","EN","NT",2007,2008
+"Pteropus molossinus","Pohnpei Flying Fox","G","MAMMALS","CR","VU",2007,2008
+"Pteropus samoensis","Samoan Flying Fox","G","MAMMALS","VU","NT",2007,2008
+"Corynorhinus rafinesquii","Rafinesque's Big-eared Bat","G","MAMMALS","VU","LC",2007,2008
+"Corynorhinus townsendii","Townsend's Big-eared Bat","G","MAMMALS","VU","LC",2007,2008
+"Myotis emarginatus","Geoffroy's Bat","G","MAMMALS","VU","LC",2007,2008
+"Myotis grisescens","Gray Myotis","G","MAMMALS","EN","NT",2007,2008
+"Dasyurus geoffroii","Western Quoll","G","MAMMALS","VU","NT",2007,2008
+"Dendrolagus lumholtzi","Lumholtz's Tree Kangaroo","G","MAMMALS","LR/nt","LC",2007,2008
+"Macropus irma","Western Brush Wallaby","G","MAMMALS","LR/nt","LC",2007,2008
+"Bettongia lesueur","Burrowing Bettong","G","MAMMALS","VU","NT",2007,2008
+"Pseudochirulus cinereus","Daintree River Ringtail Possum","G","MAMMALS","LR/nt","LC",2007,2008
+"Pseudochirulus herbertensis","Herbert River Ringtail Possum","G","MAMMALS","LR/nt","LC",2007,2008
+"Equus ferus","Wild Horse","G","MAMMALS","EW","CR",2007,2008
+"Equus zebra","Mountain Zebra","G","MAMMALS","EN","VU",2007,2008
+"Rhinoceros unicornis","Indian Rhinoceros","G","MAMMALS","EN","VU",2007,2008
+"Leontopithecus chrysopygus","Black Lion Tamarin","G","MAMMALS","CR","EN",2007,2008
+"Loxodonta africana","African Elephant","G","MAMMALS","VU","NT",2007,2008
+"Castor fiber","Eurasian Beaver","G","MAMMALS","NT","LC",2007,2008
+"Leporillus conditor","Greater Stick-nest Rat","G","MAMMALS","EN","VU",2007,2008
+"Pseudomys fieldi","Shark Bay Mouse","G","MAMMALS","CR","VU",2007,2008
+"Pseudomys occidentalis","Western Mouse","G","MAMMALS","EN","LC",2007,2008
+"Spermophilus suslicus","Speckled Ground Squirrel","G","MAMMALS","VU","NT",2007,2008
+"Spermophilus washingtoni","Washington Ground Squirrel","G","MAMMALS","VU","NT",2007,2008
+"Panthera pardus","Leopard","G","MAMMALS","LC","NT",2007,2008
+"Prionailurus planiceps","Flat-headed Cat","G","MAMMALS","VU","EN",2007,2008
+"Prionailurus viverrinus","Fishing Cat","G","MAMMALS","VU","EN",2007,2008
+"Spilogale pygmaea","Pygmy Spotted Skunk","G","MAMMALS","LR/lc","VU",2007,2008
+"Aonyx cinerea","Asian Small-Clawed Otter","G","MAMMALS","NT","VU",2007,2008
+"Mustela altaica","Altai Weasel","G","MAMMALS","LR/lc","NT",2007,2008
+"Vormela peregusna","Marbled Polecat","G","MAMMALS","LR/lc","VU",2007,2008
+"Arctocephalus galapagoensis","Galápagos Fur Seal","G","MAMMALS","VU","EN",2007,2008
+"Neophoca cinerea","Australian Sea Lion","G","MAMMALS","LR/lc","EN",2007,2008
+"Zalophus wollebaeki","Galápagos Sea Lion","G","MAMMALS","VU","EN",2007,2008
+"Monachus schauinslandi","Hawaiian Monk Seal","G","MAMMALS","EN","CR",2007,2008
+"Hemigalus derbyanus","Banded Civet","G","MAMMALS","LR/lc","VU",2007,2008
+"Paradoxurus zeylonensis","Golden Palm Civet","G","MAMMALS","LR/lc","VU",2007,2008
+"Cephalophus jentinki","Jentink's Duiker","G","MAMMALS","VU","EN",2007,2008
+"Kobus megaceros","Nile Lechwe","G","MAMMALS","LR/nt","EN",2007,2008
+"Axis kuhlii","Bawean Deer","G","MAMMALS","EN","CR",2007,2008
+"Hydropotes inermis","Chinese Water Deer","G","MAMMALS","LR/nt","VU",2007,2008
+"Rucervus eldii","Eld's Deer","G","MAMMALS","VU","EN",2007,2008
+"Rusa timorensis","Javan Rusa","G","MAMMALS","LR/lc","VU",2007,2008
+"Rusa unicolor","Sambar","G","MAMMALS","LR/lc","VU",2007,2008
+"Sus barbatus","Bearded Pig","G","MAMMALS","LR/lc","VU",2007,2008
+"Sus celebensis","Sulawesi Warty Pig","G","MAMMALS","LR/lc","NT",2007,2008
+"Tayassu pecari","White-Lipped Peccary","G","MAMMALS","LR/lc","NT",2007,2008
+"Amorphochilus schnablii","Smoky Bat","G","MAMMALS","VU","EN",2007,2008
+"Coelops robinsoni","Malayan Tailless Leaf-nosed Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Tadarida johorensis","Northern Free-tailed Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Tadarida mops","Malayan Free-tailed Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Nycteris tragata","Malayan Slit-faced Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Lonchorhina fernandezi","Fernandez's Sword-Nosed Bat","G","MAMMALS","VU","EN",2007,2008
+"Lonchorhina orinocensis","Orinoco Sword-Nosed Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Platyrrhinus chocoensis","Choco Broad-Nosed Bat","G","MAMMALS","VU","EN",2007,2008
+"Acerodon mackloti","Sunda Fruit Bat","G","MAMMALS","LR/lc","VU",2007,2008
+"Eidolon helvum","Straw-Coloured Fruit Bat","G","MAMMALS","LC","NT",2007,2008
+"Megaerops wetmorei","White-collared Fruit Bat","G","MAMMALS","LR/lc","VU",2007,2008
+"Pteropus caniceps","North Moluccan Flying Fox","G","MAMMALS","LR/lc","NT",2007,2008
+"Pteropus lylei","Lyle's Flying Fox","G","MAMMALS","LR/lc","VU",2007,2008
+"Pteropus melanopogon","Black-bearded Flying Fox","G","MAMMALS","LR/lc","EN",2007,2008
+"Pteropus niger","Mauritan Flying Fox","G","MAMMALS","VU","EN",2007,2008
+"Pteropus temminckii","Temminck's Flying Fox","G","MAMMALS","LR/nt","VU",2007,2008
+"Pteropus vampyrus","Large Flying-fox","G","MAMMALS","LR/lc","NT",2007,2008
+"Pteropus woodfordi","Dwarf Flying Fox","G","MAMMALS","LR/lc","VU",2007,2008
+"Rousettus bidens","Manado Rousette","G","MAMMALS","LR/nt","VU",2007,2008
+"Styloctenium wallacei","Stripe-faced Fruit Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Rhinolophus cognatus","Andaman Horseshoe Bat","G","MAMMALS","VU","EN",2007,2008
+"Rhinolophus sedulus","Lesser Wooly Horseshoe Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Corynorhinus mexicanus","Mexican Big-eared Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Hesperoptenus tomesi","Large False Serotine","G","MAMMALS","LR/lc","VU",2007,2008
+"Kerivoula pellucida","Clear-winged Woolly Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Murina aenea","Bronze Tube-nosed Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Murina rozendaali","Gilded Tube-nosed Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Phoniscus atrox","Groove-toothed Trumpet-eared Bat","G","MAMMALS","LR/lc","NT",2007,2008
+"Rhogeessa minutilla","Tiny Yellow Bat","G","MAMMALS","LR/nt","VU",2007,2008
+"Dasyurus hallucatus","Northern Quoll","G","MAMMALS","LR/nt","EN",2007,2008
+"Pseudantechinus bilarni","Sandstone Pseudantechinus","G","MAMMALS","LR/lc","NT",2007,2008
+"Sarcophilus harrisii","Tasmanian Devil","G","MAMMALS","LR/lc","EN",2007,2008
+"Myrmecobius fasciatus","Numbat","G","MAMMALS","VU","EN",2007,2008
+"Burramys parvus","Mountain Pygmy Possum","G","MAMMALS","EN","CR",2007,2008
+"Dendrolagus mbaiso","Dingiso","G","MAMMALS","VU","CR",2007,2008
+"Dendrolagus scottae","Tenkile","G","MAMMALS","EN","CR",2007,2008
+"Dorcopsis luctuosa","Grey Dorcopsis","G","MAMMALS","LR/lc","VU",2007,2008
+"Dorcopsulus vanheurni","Small Dorcopsis","G","MAMMALS","LR/lc","NT",2007,2008
+"Petaurus abidi","Northern Glider","G","MAMMALS","VU","CR",2007,2008
+"Phalanger lullulae","Woodlark Cuscus","G","MAMMALS","LR/lc","EN",2007,2008
+"Phalanger matanim","Telefomin Cuscus","G","MAMMALS","EN","CR",2007,2008
+"Spilocuscus kraemeri","Admiralty Cuscus","G","MAMMALS","LR/lc","NT",2007,2008
+"Spilocuscus rufoniger","Black-spotted Cuscus","G","MAMMALS","EN","CR",2007,2008
+"Bettongia penicillata","Woylie","G","MAMMALS","LR/cd","CR",2007,2008
+"Pseudochirops coronatus","Reclusive Ringtail","G","MAMMALS","LR/lc","VU",2007,2008
+"Ochotona iliensis","Ili Pika","G","MAMMALS","VU","EN",2007,2008
+"Equus hemionus","Asiatic Wild Ass","G","MAMMALS","VU","EN",2007,2008
+"Manis javanica","Sunda Pangolin","G","MAMMALS","LR/nt","EN",2007,2008
+"Manis pentadactyla","Chinese Pangolin","G","MAMMALS","LR/nt","EN",2007,2008
+"Saguinus niger","Black-handed Tamarin","G","MAMMALS","LC","VU",2007,2008
+"Macaca hecki","Heck's Macaque","G","MAMMALS","LR/nt","VU",2007,2008
+"Macaca nigra","Celebes Crested Macaque","G","MAMMALS","EN","CR",2007,2008
+"Macaca tonkeana","Tonkean Macaque","G","MAMMALS","LR/nt","VU",2007,2008
+"Presbytis melalophos","Sumatran Surili","G","MAMMALS","LR/nt","EN",2007,2008
+"Presbytis thomasi","Thomas’s Langur","G","MAMMALS","LR/nt","VU",2007,2008
+"Pygathrix cinerea","Grey-shanked Douc Langur","G","MAMMALS","EN","CR",2007,2008
+"Trachypithecus obscurus","Dusky Leaf-monkey","G","MAMMALS","LR/lc","NT",2007,2008
+"Hylobates agilis","Agile Gibbon","G","MAMMALS","LR/nt","EN",2007,2008
+"Hylobates albibarbis","Bornean White-bearded Gibbon","G","MAMMALS","LR/nt","EN",2007,2008
+"Hylobates klossii","Kloss’s Gibbon","G","MAMMALS","VU","EN",2007,2008
+"Hylobates lar","Lar Gibbon","G","MAMMALS","LR/nt","EN",2007,2008
+"Hylobates muelleri","Müller's Bornean Gibbon","G","MAMMALS","LR/nt","EN",2007,2008
+"Nomascus concolor","Black Crested Gibbon","G","MAMMALS","EN","CR",2007,2008
+"Symphalangus syndactylus","Siamang","G","MAMMALS","LR/nt","EN",2007,2008
+"Nycticebus coucang","Greater Slow Loris","G","MAMMALS","LR/lc","VU",2007,2008
+"Tarsius bancanus","Horsfield’s Tarsier","G","MAMMALS","LR/lc","VU",2007,2008
+"Abrothrix illuteus","Gray Grass Mouse","G","MAMMALS","LR/lc","NT",2007,2008
+"Abrothrix sanborni","Sanborn's Grass Mouse","G","MAMMALS","LR/lc","NT",2007,2008
+"Akodon latebricola","Ecuadorean Grass Mouse","G","MAMMALS","LR/lc","VU",2007,2008
+"Akodon surdus","Silent Grass Mouse","G","MAMMALS","LR/lc","VU",2007,2008
+"Arborimus longicaudus","Red Tree Vole","G","MAMMALS","LR/lc","NT",2007,2008
+"Arvicola sapidus","Southern Water Vole","G","MAMMALS","LR/nt","VU",2007,2008
+"Calomys hummelincki","Hummelinck's Vesper Mouse","G","MAMMALS","LR/lc","VU",2007,2008
+"Mesocricetus brandti","Brandt's Hamster","G","MAMMALS","LR/lc","NT",2007,2008
+"Microtus oaxacensis","Tarabundi Vole","G","MAMMALS","LR/nt","EN",2007,2008
+"Microtus quasiater","Japalapan Pine Vole","G","MAMMALS","LR/lc","NT",2007,2008
+"Microtus umbrosus","Zepoal Tepec Vole","G","MAMMALS","LR/lc","EN",2007,2008
+"Neotoma palatina","Bolano's Woodrat","G","MAMMALS","LR/nt","VU",2007,2008
+"Reithrodontomys microdon","Small-toothed Harvest Mouse","G","MAMMALS","LR/nt","VU",2007,2008
+"Reithrodontomys spectabilis","Cozumel Harvest Mouse","G","MAMMALS","EN","CR",2007,2008
+"Sigmodon alleni","Allen's Cotton Rat","G","MAMMALS","LR/lc","VU",2007,2008
+"Thomasomys hylophilus","Woodland Oldfield Mouse","G","MAMMALS","LR/lc","EN",2007,2008
+"Wilfredomys oenax","Greater Wilfred's Mouse","G","MAMMALS","LR/lc","EN",2007,2008
+"Xenomys nelsoni","Magedelena Wood Rat","G","MAMMALS","LR/nt","EN",2007,2008
+"Ctenomys australis","Southern Tuco-tuco","G","MAMMALS","LR/lc","EN",2007,2008
+"Allactaga vinogradovi","Vinogradov's Jerboa","G","MAMMALS","LR/lc","NT",2007,2008
+"Pappogeomys alcorni","Alcorn's Pocket Gopher","G","MAMMALS","VU","CR",2007,2008
+"Chaetodipus goldmani","Goldman's Pocket Mouse","G","MAMMALS","LR/lc","VU",2007,2008
+"Dipodomys nitratoides","Fresno Kangaroo Rat","G","MAMMALS","LR/nt","VU",2007,2008
+"Gerbillus gleadowi","Little Hairy-footed Gerbil","G","MAMMALS","LR/lc","NT",2007,2008
+"Maxomys rajah","Rajah Sundaic Maxomys","G","MAMMALS","LR/lc","VU",2007,2008
+"Maxomys whiteheadi","Whitehead’s Sundaic Maxomys","G","MAMMALS","LR/lc","VU",2007,2008
+"Nesokia bunnii","Bunn's Short-Tailed Bandicoot Rat","G","MAMMALS","LR/nt","EN",2007,2008
+"Niviventer cremoriventer","Sundaic Arboreal Niviventer","G","MAMMALS","LR/lc","VU",2007,2008
+"Pseudomys fumeus","Smoky Mouse","G","MAMMALS","VU","EN",2007,2008
+"Pseudomys novaehollandiae","New Holland Mouse","G","MAMMALS","LR/lc","VU",2007,2008
+"Rattus richardsoni","Glacier Rat","G","MAMMALS","LR/lc","VU",2007,2008
+"Solomys ponceleti","Poncelet's Giant Rat","G","MAMMALS","EN","CR",2007,2008
+"Solomys salebrosus","Bougainville Giant Rat","G","MAMMALS","LR/nt","EN",2007,2008
+"Solomys sapientis","Isabel Giant Rat","G","MAMMALS","VU","EN",2007,2008
+"Uromys neobritannicus","Bismarck Giant Rat","G","MAMMALS","LR/lc","EN",2007,2008
+"Zyzomys maini","Arnhem Land Rock Rat","G","MAMMALS","LR/lc","NT",2007,2008
+"Octodon bridgesi","Bridges's Degu","G","MAMMALS","LR/lc","VU",2007,2008
+"Octodon pacificus","","G","MAMMALS","VU","CR",2007,2008
+"Callosciurus adamsi","Ear-spot Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Callosciurus melanogaster","Mentawai Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Marmota sibirica","Mongolian marmot","G","MAMMALS","LR/lc","EN",2007,2008
+"Marmota vancouverensis","Vancouver Island Marmot","G","MAMMALS","EN","CR",2007,2008
+"Petaurista nobilis","Bhutan Giant Flying Squirrel","G","MAMMALS","LR/nt","VU",2007,2008
+"Petinomys genibarbis","Whiskered Flying Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Petinomys lugens","Siberut Flying Squirrel","G","MAMMALS","LR/nt","EN",2007,2008
+"Petinomys setosus","Temminck's Flying Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Petinomys vordermanni","Vordermann's Flying Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Pteromyscus pulverulentus","Smoky Flying Squirrel","G","MAMMALS","LR/nt","EN",2007,2008
+"Ratufa bicolor","Black Giant Squirrel","G","MAMMALS","LR/lc","NT",2007,2008
+"Rhinosciurus laticaudatus","Shrew-faced Squirrel","G","MAMMALS","LR/lc","NT",2007,2008
+"Rubrisciurus rubriventer","Sulawesi Giant Squirrel","G","MAMMALS","LR/lc","VU",2007,2008
+"Spermophilus perotensis","Perote Ground Squirrel","G","MAMMALS","LR/nt","EN",2007,2008
+"Spermophilus xanthoprymnus","Asia Minor Ground Squirrel","G","MAMMALS","LR/lc","NT",2007,2008
+"Spalax arenarius","Sandy Mole Rate","G","MAMMALS","VU","EN",2007,2008
+"Spalax zemni","Podolian Mole Rat","G","MAMMALS","LR/lc","VU",2007,2008
+"Ducula galeata","Marquesan Imperial-pigeon","G","BIRDS","CR","EN",2007,2008
+"Apteryx owenii","Little Spotted Kiwi","G","BIRDS","VU","NT",2007,2008
+"Aythya baeri","Baer's Pochard","G","BIRDS","VU","EN",2007,2008
+"Sterna nereis","Fairy Tern","G","BIRDS","LC","VU",2007,2008
+"Eurynorhynchus pygmeus","Spoon-billed Sandpiper","G","BIRDS","EN","CR",2007,2008
+"Numenius arquata","Eurasian Curlew","G","BIRDS","LC","NT",2007,2008
+"Ducula finschii","Finsch's Imperial-pigeon","G","BIRDS","LC","NT",2007,2008
+"Ducula rubricera","Red-knobbed Imperial-pigeon","G","BIRDS","LC","NT",2007,2008
+"Reinwardtoena browni","Pied Cuckoo-dove","G","BIRDS","LC","NT",2007,2008
+"Centropus violaceus","Violaceous Coucal","G","BIRDS","LC","NT",2007,2008
+"Accipiter princeps","New Britain Goshawk","G","BIRDS","NT","VU",2007,2008
+"Pauxi pauxi","Helmeted Curassow","G","BIRDS","VU","EN",2007,2008
+"Tetrao mlokosiewiczi","Caucasian Grouse","G","BIRDS","DD","NT",2007,2008
+"Atrichornis rufescens","Rufous Scrub-bird","G","BIRDS","NT","VU",2007,2008
+"Coracina newtoni","Réunion Cuckooshrike","G","BIRDS","EN","CR",2007,2008
+"Corvus kubaryi","Mariana Crow","G","BIRDS","EN","CR",2007,2008
+"Loxops caeruleirostris","Akekee","G","BIRDS","EN","CR",2007,2008
+"Stipiturus mallee","Mallee Emuwren","G","BIRDS","VU","EN",2007,2008
+"Melidectes whitemanensis","Bismarck Melidectes","G","BIRDS","LC","NT",2007,2008
+"Mimus trifasciatus","Floreana Mockingbird","G","BIRDS","EN","CR",2007,2008
+"Megalurulus grosvenori","Bismarck Thicketbird","G","BIRDS","DD","VU",2007,2008
+"Sylvia undata","Dartford Warbler","G","BIRDS","LC","NT",2007,2008
+"Diomedea dabbenena","Tristan Albatross","G","BIRDS","EN","CR",2007,2008
+"Cacatua ophthalmica","Blue-eyed Cockatoo","G","BIRDS","LC","VU",2007,2008
+"Ninox odiosa","Russet Hawk-owl","G","BIRDS","LC","VU",2007,2008
+"Tyto aurantia","Bismarck Masked-owl","G","BIRDS","DD","VU",2007,2008
+"Thorius macdougalli","","G","AMPHIBIANS","EN","VU",2007,2008
+"Incilius holdridgei","","G","AMPHIBIANS","CR","EX",2007,2008
+"Centrolene buckleyi","","G","AMPHIBIANS","NT","VU",2007,2008
+"Craugastor escoces","","G","AMPHIBIANS","CR","EX",2007,2008
+"Parvimolge townsendi","","G","AMPHIBIANS","EN","CR",2007,2008
+"Pseudoeurycea gigantea","","G","AMPHIBIANS","EN","CR",2007,2008
+"Pseudoeurycea juarezi","","G","AMPHIBIANS","EN","CR",2007,2008
+"Thorius munificus","","G","AMPHIBIANS","EN","CR",2007,2008
+"Acrocephalus luscinius","Nightingale Reed-warbler ","G","BIRDS","EN","CR",2008,2009
+"Anodorhynchus leari","Lear's Macaw","G","BIRDS","CR","EN",2008,2009
+"Balearica regulorum","Grey Crowned-crane","G","BIRDS","LC","VU",2008,2009
+"Foudia rubra","Mauritius Fody ","G","BIRDS","CR","EN",2008,2009
+"Grantiella picta","Painted Honeyeater","G","BIRDS","NT","VU",2008,2009
+"Heteromirafra sidamoensis","Sidamo Lark","G","BIRDS","EN","CR",2008,2009
+"Loxioides bailleui","Palila","G","BIRDS","EN","CR",2008,2009
+"Menura alberti","Albert's Lyrebird","G","BIRDS","VU","NT",2008,2009
+"Podiceps gallardoi","Hooded Grebe","G","BIRDS","NT","EN",2008,2009
+"Pterodroma axillaris","Chatham Petrel","G","BIRDS","CR","EN",2008,2009
+"Pterodroma cookii","Cook's Petrel","G","BIRDS","EN","VU",2008,2009
+"Suiriri islerorum","Chapada Flycatcher ","G","BIRDS","LC","NT",2008,2009
+"Todiramphus godeffroyi","Marquesan Kingfisher ","G","BIRDS","EN","CR",2008,2009
+"Nectophrynoides asperginis","Kihansi Spray Toad","G","AMPHIBIANS","CR","EW",2008,2009
+"Balearica pavonina","Black Crowned-crane","G","BIRDS","NT","VU",2009,2010
+"Calidris tenuirostris","Great Knot","G","BIRDS","LC","VU",2009,2010
+"Chaetura pelagica","Chimney Swift","G","BIRDS","LC","NT",2009,2010
+"Cyanolimnas cerverai","Zapata Rail","G","BIRDS","EN","CR",2009,2010
+"Emberiza jankowskii","Rufous-backed Bunting","G","BIRDS","VU","EN",2009,2010
+"Numenius madagascariensis","Far Eastern Curlew","G","BIRDS","LC","VU",2009,2010
+"Ognorhynchus icterotis","Yellow-eared Parrot","G","BIRDS","CR","EN",2009,2010
+"Spheniscus demersus","African Penguin","G","BIRDS","VU","EN",2009,2010
+"Sturnus melanopterus","Black-winged Starling","G","BIRDS","EN","CR",2009,2010
+"Vandijkophrynus amatolicus","Amatola Toad","G","AMPHIBIANS","EN","CR",2009,2010
+"Ceratozamia latifolia","","G","CYCADS","VU","EN",2009,2010
+"Ceratozamia miqueliana","","G","CYCADS","VU","CR",2009,2010
+"Ceratozamia robusta","","G","CYCADS","VU","EN",2009,2010
+"Cycas armstrongii","","G","CYCADS","LC","VU",2009,2010
+"Cycas elongata","","G","CYCADS","VU","EN",2009,2010
+"Cycas lindstromii","","G","CYCADS","VU","EN",2009,2010
+"Cycas pachypoda","","G","CYCADS","VU","CR",2009,2010
+"Cycas taitungensis","","G","CYCADS","VU","EN",2009,2010
+"Encephalartos brevifoliolatus","","G","CYCADS","EW","EW",2009,2010
+"Encephalartos cerinus","Waxen Cycad","G","CYCADS","CR","CR",2009,2010
+"Encephalartos ferox","Kozi Cycad","G","CYCADS","LC","NT",2009,2010
+"Encephalartos whitelockii","","G","CYCADS","VU","CR",2009,2010
+"Macrozamia lomandroides","","G","CYCADS","VU","EN",2009,2010
+"Stangeria eriopus","Natal Grass Cycad","G","CYCADS","NT","VU",2009,2010
+"Equus ferus","Przewalski's Horse","G","MAMMALS","CR","EN",2010,2011
+"Oryx leucoryx","Arabian Oryx","G","MAMMALS","EN","VU",2010,2011
+"Sylvilagus mansuetus","San Jose Brush Rabbit","G","MAMMALS","NT","CR",2010,2011
+"Anas nesiotis","Campbell Islands Teal","G","BIRDS","CR","EN",2010,2011
+"Ardeotis nigriceps","Great Indian Bustard","G","BIRDS","EN","CR",2010,2011
+"Atlapetes pallidiceps","Pale-headed Brush-finch","G","BIRDS","CR","EN",2010,2011
+"Columba bollii","Dark-tailed Laurel Pigeon","G","BIRDS","NT","LC",2010,2011
+"Columba junoniae","White-tailed Laurel Pigeon","G","BIRDS","EN","NT",2010,2011
+"Columba trocaz","Madeira Laurel Pigeon","G","BIRDS","NT","LC",2010,2011
+"Myiagra albiventris","Samoan Flycatcher","G","BIRDS","VU","NT",2010,2011
+"Eumetopias jubatus","Steller Sea Lion","G","MAMMALS","EN","NT",2011,2012
+"Accipiter poliogaster","Gray-bellied Hawk","G","BIRDS","LC","NT",2011,2012
+"Agamia agami","Agami Heron","G","BIRDS","LC","VU",2011,2012
+"Amazona festiva","Festive Amazon","G","BIRDS","LC","VU",2011,2012
+"Amazona kawalli","Kawall's Amazon","G","BIRDS","LC","NT",2011,2012
+"Amytornis housei","Black Grasswren","G","BIRDS","LC","NT",2011,2012
+"Amytornis merrotsyi","Short-tailed Grasswren","G","BIRDS","LC","NT",2011,2012
+"Aphelocoma insularis","Island Scrub-jay","G","BIRDS","NT","VU",2011,2012
+"Arremon castaneiceps","Olive Finch","G","BIRDS","LC","NT",2011,2012
+"Asthenes helleri","Puna Thistletail","G","BIRDS","LC","VU",2011,2012
+"Atrichornis clamosus","Noisy Scrub-bird","G","BIRDS","VU","EN",2011,2012
+"Atrichornis rufescens","Rufous Scrub-bird","G","BIRDS","VU","EN",2011,2012
+"Aythya baeri","Baer's Pochard","G","BIRDS","EN","CR",2011,2012
+"Cacicus koepckeae","Selva Cacique","G","BIRDS","VU","EN",2011,2012
+"Calidris pusilla","Semipalmated Sandpiper","G","BIRDS","LC","NT",2011,2012
+"Capito dayi","Black-girdled Barbet","G","BIRDS","LC","VU",2011,2012
+"Cercomacra carbonaria","Rio Branco Antbird","G","BIRDS","NT","CR",2011,2012
+"Clangula hyemalis","Long-tailed Duck","G","BIRDS","LC","VU",2011,2012
+"Conirostrum bicolor","Bicoloured Conebill","G","BIRDS","LC","NT",2011,2012
+"Conirostrum margaritae","Pearly-breasted Conebill","G","BIRDS","LC","VU",2011,2012
+"Conopias cinchoneti","Lemon-browed Flycatcher","G","BIRDS","LC","VU",2011,2012
+"Cranioleuca curtata","Ash-browed Spinetail","G","BIRDS","LC","VU",2011,2012
+"Cranioleuca marcapatae","Marcapata Spinetail","G","BIRDS","LC","VU",2011,2012
+"Cranioleuca muelleri","Scaled Spinetail","G","BIRDS","LC","EN",2011,2012
+"Crax alector","Black Curassow","G","BIRDS","LC","VU",2011,2012
+"Anodonthyla hutchisoni","","G","AMPHIBIANS","DD","EN",2011,2012
+"Tayassu pecari","White-lipped Peccary","G","MAMMALS","NT","VU",2012,2013
+"Urocyon littoralis","Island Fox","G","MAMMALS","CR","NT",2012,2013
+"Acrocephalus rodericanus","Rodrigues Warbler","G","BIRDS","EN","NT",2012,2013
+"Acrocephalus sorghophilus","Streaked Reed-warbler","G","BIRDS","VU","EN",2012,2013
+"Ardeotis kori","Kori Bustard","G","BIRDS","LC","NT",2012,2013
+"Cacatua alba","White Cockatoo","G","BIRDS","VU","EN",2012,2013
+"Emberiza aureola","Yellow-breasted Bunting","G","BIRDS","VU","EN",2012,2013
+"Eupodotis afra","Black Bustard","G","BIRDS","LC","VU",2012,2013
+"Foudia flavicans","Rodrigues Fody","G","BIRDS","VU","NT",2012,2013
+"Garrulax rufifrons","Rufous-fronted Laughingthrush","G","BIRDS","NT","EN",2012,2013
+"Oriolus mellianus","Silver Oriole","G","BIRDS","VU","EN",2012,2013
+"Oryzoborus maximiliani","Great-billed Seed-finch","G","BIRDS","NT","VU",2012,2013
+"Phalacrocorax capensis","Cape Cormorant","G","BIRDS","NT","EN",2012,2013
+"Picoides borealis","Red-cockaded Woodpecker","G","BIRDS","VU","NT",2012,2013
+"Polemaetus bellicosus","Martial Eagle","G","BIRDS","NT","VU",2012,2013
+"Sarothrura ayresi","White-winged Flufftail","G","BIRDS","EN","CR",2012,2013
+"Balebreviceps hillmani","Bale Mountains Treefrog","G","AMPHIBIANS","EN","CR",2012,2013
+"Duellmanohyla uranochroa","Costa Rica Brook Frog","G","AMPHIBIANS","CR","EN",2012,2013
+"Lithobates vibicarius","Rancho Redondo Frog","G","AMPHIBIANS","CR","VU",2012,2013
+"Mannophryne olmonae","Bloody Bay Poison Frog","G","AMPHIBIANS","CR","VU",2012,2013
+"Melanophryniscus admirabilis","Red-belly Toad","G","AMPHIBIANS","NT","CR",2012,2013
+"Avahi laniger","Eastern Woolly Lemur","G","MAMMALS","LC","VU",2013,2014
+"Daubentonia madagascariensis","Aye-aye","G","MAMMALS","NT","EN",2013,2014
+"Eulemur albifrons","White-fronted Lemur","G","MAMMALS","VU","EN",2013,2014
+"Eulemur cinereiceps","White-collared Lemur","G","MAMMALS","EN","CR",2013,2014
+"Eulemur collaris","Collared Brown Lemur","G","MAMMALS","VU","EN",2013,2014
+"Eulemur coronatus","Crowned Lemur","G","MAMMALS","VU","EN",2013,2014
+"Eulemur mongoz","Mongoose Lemur","G","MAMMALS","VU","CR",2013,2014
+"Hapalemur aureus","Golden Bamboo Lemur","G","MAMMALS","EN","CR",2013,2014
+"Indri indri","Indri","G","MAMMALS","EN","CR",2013,2014
+"Lemur catta","Ring-tailed Lemur","G","MAMMALS","NT","EN",2013,2014
+"Lepilemur edwardsi","Milne-Edwards's Sportive Lemur","G","MAMMALS","VU","EN",2013,2014
+"Manis crassicaudata","Indian Pangolin","G","MAMMALS","NT","EN",2013,2014
+"Accipiter erythrauchen","Rufous-necked Sparrowhawk","G","BIRDS","LC","NT",2013,2014
+"Anodorhynchus hyacinthinus","Hyacinth Macaw","G","BIRDS","EN","VU",2013,2014
+"Brachyramphus brevirostris","Kittlitz's Murrelet","G","BIRDS","CR","NT",2013,2014
+"Didunculus strigirostris","Tooth-billed Pigeon","G","BIRDS","EN","CR",2013,2014
+"Eulidia yarrellii","Chilean Woodstar","G","BIRDS","EN","CR",2013,2014
+"Falco fasciinucha","Taita Falcon","G","BIRDS","NT","VU",2013,2014
+"Falco punctatus","Mauritius Kestrel","G","BIRDS","VU","EN",2013,2014
+"Liocichla bugunorum","Bugun Liocichla","G","BIRDS","VU","CR",2013,2014
+"Pica nuttalli","Yellow-billed Magpie","G","BIRDS","LC","NT",2013,2014
+"Prioniturus luconensis","Green Racquet-tail","G","BIRDS","VU","EN",2013,2014
+"Altiphrynoides osgoodi","Osgood's Ethiopian Toad","G","AMPHIBIANS","VU","CR",2013,2014
+"Andinobates dorisswansonae","","G","AMPHIBIANS","CR","VU",2013,2014
+"Andinobates tolimensis","","G","AMPHIBIANS","EN","VU",2013,2014
+"Arctocephalus townsendi","Guadalupe Fur Seal","G","MAMMALS","NT","LC",2014,2015
+"Capra falconeri","Markhor","G","MAMMALS","EN","NT",2014,2015
+"Caracal aurata","African Golden Cat","G","MAMMALS","NT","VU",2014,2015
+"Dendrohyrax validus","Eastern Tree Hyrax","G","MAMMALS","LC","NT",2014,2015
+"Fossa fossana","Spotted Fanaloka","G","MAMMALS","NT","VU",2014,2015
+"Lynx pardinus","Iberian Lynx","G","MAMMALS","CR","EN",2014,2015
+"Mungotictis decemlineata","Bokiboky","G","MAMMALS","VU","EN",2014,2015
+"Phocarctos hookeri","New Zealand Sea Lion","G","MAMMALS","VU","EN",2014,2015
+"Acrocephalus sechellensis","Seychelles Warbler","G","BIRDS","VU","NT",2014,2015
+"Alca torda","Razorbill","G","BIRDS","LC","NT",2014,2015
+"Amytornis dorotheae","Carpentarian Grasswren","G","BIRDS","NT","VU",2014,2015
+"Anas chlorotis","Brown Teal","G","BIRDS","EN","NT",2014,2015
+"Anthus pratensis","Meadow Pipit","G","BIRDS","LC","NT",2014,2015
+"Aquila nipalensis","Steppe Eagle","G","BIRDS","LC","EN",2014,2015
+"Calidris canutus","Red Knot","G","BIRDS","LC","NT",2014,2015
+"Calidris ferruginea","Curlew Sandpiper","G","BIRDS","LC","NT",2014,2015
+"Calidris ruficollis","Red-necked Stint","G","BIRDS","LC","NT",2014,2015
+"Calidris tenuirostris","Great Knot","G","BIRDS","VU","EN",2014,2015
+"Camarhynchus pallidus","Woodpecker Finch","G","BIRDS","LC","VU",2014,2015
+"Camarhynchus psittacula","Large Tree-finch","G","BIRDS","LC","VU",2014,2015
+"Fratercula arctica","Atlantic Puffin","G","BIRDS","LC","VU",2014,2015
+"Gyps africanus","White-backed Vulture","G","BIRDS","EN","CR",2014,2015
+"Gyps coprotheres","Cape Vulture","G","BIRDS","VU","EN",2014,2015
+"Gyps rueppelli","Rüppell's Vulture","G","BIRDS","EN","CR",2014,2015
+"Larus audouinii","Audouin's Gull","G","BIRDS","NT","LC",2014,2015
+"Lathamus discolor","Swift Parrot","G","BIRDS","EN","CR",2014,2015
+"Limosa lapponica","Bar-tailed Godwit","G","BIRDS","LC","NT",2014,2015
+"Melanitta fusca","Velvet Scoter","G","BIRDS","EN","VU",2014,2015
+"Necrosyrtes monachus","Hooded Vulture","G","BIRDS","EN","CR",2014,2015
+"Numenius madagascariensis","Far Eastern Curlew","G","BIRDS","VU","EN",2014,2015
+"Pterodroma axillaris","Chatham Petrel","G","BIRDS","EN","VU",2014,2015
+"Rhinoplax vigil","Helmeted Hornbill","G","BIRDS","NT","CR",2014,2015
+"Torgos tracheliotos","Lappet-faced Vulture","G","BIRDS","VU","EN",2014,2015
+"Trigonoceps occipitalis","White-headed Vulture","G","BIRDS","VU","CR",2014,2015
+"Leiopelma hamiltoni","Hamilton's Frog","G","AMPHIBIANS","EN","VU",2014,2015
+"Rhinella atacamensis","Atacama Toad","G","AMPHIBIANS","LC","VU",2014,2015
+"Ailuropoda melanoleuca","Giant Panda","G","MAMMALS","EN","VU",2015,2016
+"Antechinus bellus","Fawn Antechinus","G","MAMMALS","LC","VU",2015,2016
+"Cephalophus dorsalis","Bay Duiker","G","MAMMALS","LC","NT",2015,2016
+"Cephalophus leucogaster","White-bellied Duiker","G","MAMMALS","LC","NT",2015,2016
+"Cephalophus silvicultor","Yellow-backed Duiker","G","MAMMALS","LC","NT",2015,2016
+"Conilurus penicillatus","Brush-tailed Rabbit-rat","G","MAMMALS","NT","VU",2015,2016
+"Dasyurus viverrinus","Eastern Quoll","G","MAMMALS","NT","EN",2015,2016
+"Dendrolagus spadix","Lowlands Tree Kangaroo","G","MAMMALS","LC","VU",2015,2016
+"Desmana moschata","Russian Desman","G","MAMMALS","VU","EN",2015,2016
+"Equus quagga","Plains Zebra","G","MAMMALS","LC","NT",2015,2016
+"Eupleres goudotii","Eastern Falanouc","G","MAMMALS","EN","VU",2015,2016
+"Galidictis fasciata","Broad-striped Vontsira","G","MAMMALS","NT","VU",2015,2016
+"Giraffa camelopardalis","Giraffe","G","MAMMALS","LC","VU",2015,2016
+"Gorilla beringei","Eastern Gorilla","G","MAMMALS","EN","CR",2015,2016
+"Gymnobelideus leadbeateri","Leadbeater's Possum","G","MAMMALS","EN","CR",2015,2016
+"Hipposideros hypophyllus","Kolar Leaf-nosed Bat","G","MAMMALS","EN","CR",2015,2016
+"Leporillus conditor","Greater Stick-nest Rat","G","MAMMALS","VU","NT",2015,2016
+"Melomys rubicola","Bramble Cay Melomys","G","MAMMALS","CR","EX",2015,2016
+"Mesembriomys gouldii","Black-footed Tree-rat","G","MAMMALS","NT","VU",2015,2016
+"Muntiacus atherodes","Bornean Yellow Muntjac","G","MAMMALS","LC","NT",2015,2016
+"Muntiacus vuquangensis","Large-antlered Muntjac","G","MAMMALS","EN","CR",2015,2016
+"Notomys cervinus","Fawn Hopping-mouse","G","MAMMALS","VU","NT",2015,2016
+"Nyctalus lasiopterus","Giant Noctule","G","MAMMALS","NT","VU",2015,2016
+"Onychogalea fraenata","Bridled Nailtail Wallaby","G","MAMMALS","EN","VU",2015,2016
+"Ornithorhynchus anatinus","Platypus","G","MAMMALS","LC","NT",2015,2016
+"Pantholops hodgsonii","Tibetan Antelope","G","MAMMALS","EN","NT",2015,2016
+"Perameles gunnii","Eastern Barred Bandicoot","G","MAMMALS","NT","VU",2015,2016
+"Petauroides volans","Greater Glider","G","MAMMALS","LC","VU",2015,2016
+"Petaurus australis","Yellow-bellied Glider","G","MAMMALS","LC","NT",2015,2016
+"Petrogale godmani","Godman's Rock Wallaby","G","MAMMALS","LC","NT",2015,2016
+"Petrogale lateralis","Black-footed Rock Wallaby","G","MAMMALS","NT","VU",2015,2016
+"Petrogale mareeba","Mareeba Rock Wallaby","G","MAMMALS","LC","NT",2015,2016
+"Petrogale purpureicollis","Purple-necked Rock Wallaby","G","MAMMALS","LC","NT",2015,2016
+"Phascolarctos cinereus","Koala","G","MAMMALS","LC","VU",2015,2016
+"Pongo pygmaeus","Bornean Orangutan","G","MAMMALS","EN","CR",2015,2016
+"Pteropus caniceps","North Moluccan Flying Fox","G","MAMMALS","NT","VU",2015,2016
+"Pteropus livingstonii","Livingstone's Flying Fox","G","MAMMALS","EN","CR",2015,2016
+"Thylamys fenestrae"," ","G","MAMMALS","LC","NT",2015,2016
+"Thylamys velutinus","Dwarf Fat-tailed Mouse Opossum","G","MAMMALS","LC","NT",2015,2016
+"Charadrius sanctaehelenae","St Helena Plover","G","BIRDS","CR","VU",2015,2016
+"Chloropsis sonnerati","Greater Green Leafbird","G","BIRDS","LC","VU",2015,2016
+"Cyanoramphus forbesi","Chatham Parakeet","G","BIRDS","EN","VU",2015,2016
+"Emberiza rustica","Rustic Bunting","G","BIRDS","LC","VU",2015,2016
+"Garrulax bicolor","Black-and-white Laughingthrush","G","BIRDS","VU","EN",2015,2016
+"Garrulax rufifrons","Rufous-fronted Laughingthrush","G","BIRDS","EN","CR",2015,2016
+"Hydrobates leucorhous","Leach's Storm-petrel","G","BIRDS","LC","VU",2015,2016
+"Icterus oberi","Montserrat Oriole","G","BIRDS","CR","VU",2015,2016
+"Pycnonotus zeylanicus","Straw-headed Bulbul","G","BIRDS","VU","EN",2015,2016
+"Pygoscelis adeliae","Adélie Penguin","G","BIRDS","NT","LC",2015,2016
+"Pygoscelis papua","Gentoo Penguin","G","BIRDS","NT","LC",2015,2016
+"Pyrrhula murina","Azores Bullfinch","G","BIRDS","EN","VU",2015,2016
+"Sternula balaenarum","Damara Tern","G","BIRDS","NT","VU",2015,2016
+"Terenura sicki","Orange-bellied Antwren","G","BIRDS","EN","CR",2015,2016
+"Zosterops flavus","Javan White-eye","G","BIRDS","NT","VU",2015,2016
+"Zosterops modestus","Seychelles White-eye","G","BIRDS","EN","VU",2015,2016
+"Aotus nancymaae","Nancy Ma’s Night Monkey","G","MAMMALS","LC","VU",2016,2017

@@ -1,0 +1,508 @@
+---
+title: "Conservation Actions"
+author: "Kurt Ingeman"
+date: "7/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Packages
+
+```{r message=FALSE}
+rm(list = ls())
+
+library(tidyverse)
+library(MASS)
+library(car)
+
+```
+
+Broad categories of conservation action 
+
+```{r message=FALSE}
+
+act <- read.csv("data/generated/intermediate/ABS_Cons_Actions_Broad.csv") 
+
+## by eyeball, the only broad categories for which there is any difference amoung outcomes reproduction and mortality
+tbl_human = table(act$Direction, act$human)
+chisq.test(tbl_human) 
+## for human X-squared = 1.4667, df = 1, p-value = 0.2259 
+## no evidence of a difference between observed and expected
+
+tbl_reprod = table(act$Direction, act$reproduction) 
+chisq.test(tbl_reprod) 
+## for reproduction: X-squared = 0.53578, df = 1, p-value = 0.4642
+
+## no significant association and this is without taking into account the multiple comparisons of more than a single test.
+
+```
+
+
+```{r}
+## A more appropriate test would be a binary logistic regression model that has all of the important conservation actions as predictors
+
+## First, get only the predictor and response variables in a df
+
+broad <- act %>% 
+  select_at(3:8)
+
+str(broad) # interpreting the predictors as integers ... coerce to factor
+broad <- broad %>%
+  mutate_if(sapply(broad, is.integer), as.factor)
+
+broad <- broad %>%
+  mutate_if(sapply(broad, is.character), as.factor)
+
+contrasts(broad$Direction) # negative will be used as the *reference* so variables will be interpreted as how they change the likelihood of a *positive* outcome
+
+logist_broad <- glm(Direction ~.,family=binomial(link='logit'),data=broad)
+
+summary(logist_broad) 
+
+## no significant varibles to interpret. Legal, Human, and Reproduction have negative coefficient, indicating that species with those conservation actions applied trend towards negative outcomes. In contrast, Mortality and Resources are associated with positive outcomes, albeit non-significantly. No interpretation possible with all variables in the model 
+
+## How does model selection work with binary logistic regression? Check a few of the most promising variables on their own to see if it is worth progressing to a model selection proceedure. 
+
+logist_human <- glm(Direction ~ human,family=binomial(link='logit'),data=broad)
+
+summary(logist_human) # p = 0.126 for human on its own. compare to p= 0.226 when included in the whole model
+
+anova(logist_human, test="Chisq")
+
+## No need to go further with the broad categories. There is nothing there with such a small number of data points.
+```
+
+On to the narrow categories with 15 binary predictors
+
+```{r}
+
+narrow <- read.csv("data/generated/intermediate/ABS_Cons_Actions_Narrow.csv") %>% select_at(3:18)
+
+narrow <- narrow %>%
+  mutate_if(sapply(narrow, is.integer), as.factor) %>%
+  mutate_if(sapply(narrow, is.character), as.factor)
+
+contrasts(narrow$Direction) # negative will be used as the reference so variables will be interpreted as how they change the likelihood of a positive outcome
+
+logist_narrow <- glm(Direction ~.,family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=narrow)
+summary(logist_narrow) 
+
+## ERROR: glm.fit: fitted probabilities numerically 0 or 1 occurred
+## Likely because certain predictors are able to segregate the responses perfectly well
+## Couple of options: remove any predictors with less than N observations OR use penalized regression with glm net
+
+## Hmmm let's start with a single variable and build up
+## Chi-squared
+tbl_harvest = table(narrow$Direction, narrow$harvest) 
+chisq.test(tbl_harvest) 
+
+## tbl_harvest; X-squared = 3.8519, df = 1, p-value = 0.04969
+
+## logistic regression on single variable: harvest
+## harvest/negative 6/23 = 0.2609  ; harvest/negative 8/12 = 0.6667
+## .6667/.2609 = harvest means 2.555 times higher odds of being positive? 
+##  coefficient 1.7346 harvest increases log odds of 
+logist_harvest <- glm(Direction ~ harvest, 
+                      family = binomial(link='logit'), data=narrow)
+summary(logist_harvest) 
+## p = 0.02519
+
+tbl_refuge = table(narrow$Direction, narrow$refuge) 
+chisq.test(tbl_refuge) # p-value = 0.3274
+
+logist_refuge <- glm(Direction ~ refuge, 
+                      family = binomial(link='logit'), data=narrow)
+summary(logist_refuge)
+
+logist_national <- glm(Direction ~ national, 
+                      family = binomial(link='logit'), data=narrow)
+summary(logist_national) ## p-value = 0.0181 positive effect
+
+
+## education: p-value = 0.1668 with negative coefficient
+## reintroduction the only other with weak evidence at p-value = 0.237 and a negative coefficient
+
+## interesting that the chi-square test p-value is about 2x 
+## that of the binomial logistic regression.
+## maybe because chi-square is like a two-sided test compared to
+## one-sided test of a directional glm
+
+```
+
+Stepwise procedure. Drop variables with =< 2 obs for all outcomes 
+
+```{r}
+
+## Define full and null models and do step procedure
+
+## Drop variables with =< 2 obs for all outcomes
+## Drop relocation (1,1); Habitat restoration (0,1); Conflict mitigation (1,1); Livelihood (1,1);  
+sel <- narrow %>% dplyr::select(-c(relocation,habitat.restoration,conflict.mitigation,livelihood))
+
+model.null = glm(Direction ~ 1, 
+                 data=sel,
+                 family = binomial(link="logit")
+                 )
+
+model.full = glm(Direction ~ national + harvest  + 
+                   education + international + prey + accidental +
+                   captive.breeding,
+                 data = sel,
+                 family = binomial(link="logit")
+                 )
+summary(model.full)
+
+step(model.null,
+     scope = list(upper=model.full),
+             direction="both",
+             test="Chisq",
+             data=sel)
+
+model.final <- glm(Direction ~ national + harvest,
+                 data = sel,
+                 family = binomial(link="logit")
+                 )
+library(car)
+
+Anova(model.final, type="II", test="Wald")
+
+model.min <- glm(Direction ~ national,
+                 data = sel,
+                 family = binomial(link="logit")
+                 )
+
+anova(model.final, 
+      model.min, 
+      test="Chisq")
+
+summary(model.final)
+## Coefficients:
+##            Estimate Std. Error z value Pr(>|z|)   
+## (Intercept)  -2.8017     1.0760  -2.604  0.00922 **
+## nationaly     2.2615     1.1659   1.940  0.05242 . 
+## harvesty      1.1180     0.8517   1.313  0.18926 
+
+## With both naional and harvest in model, the log odds of a positve 
+exp(2.2615) ## 9.6
+(9.6 - 1) * 100 ## odds of positive outcome 860% higher if national legislation employed 
+
+## With only national
+summary(model.min) # coefficient = 2.660
+(exp(2.660) - 1) * 100 ## odds of positive outcome 1329% higher if national legislation employed 
+
+coefs.ours <- coef(model.full)
+confint.ours <- confint(model.full)
+conf50 <- confint(model.full, level = .8)
+ours <- cbind(coefs.ours,confint.ours, conf50)
+
+confint(model.final)
+# write.csv(ours, "data/generated/12b_cons_actions_ours.csv")
+#                  2.5 %    97.5 %
+# (Intercept) -5.7488625 -1.115037
+# nationaly    0.2680311  5.290652
+# harvesty    -0.5376768  2.854004
+```
+
+So, National legislation has a clear positive influence on an improvement in status, as in 13.3x higher odds. Harvest management also seems associated with a positive effect but the confidence interval for the change in odds overlaps zero when harvest national is included. 
+
+
+Time to bring in the full data set with IUCN-defined Conservation Actions
+
+Ordinal Logistic Regression on Population Trend
+```{r}
+
+rm(list = ls())
+
+species <- read.csv("data/generated/9_apex_with_gen_changes.csv") %>%
+  dplyr::mutate(status_impr=case_when(
+    Delta_Status %in% c(-4:-1) ~ "declined",
+    Delta_Status == 0 ~ "unchanged",
+    Delta_Status %in% c(1:4) ~ "improved")) %>% 
+  dplyr::mutate(status_impr = as.factor(status_impr)) %>% 
+  dplyr::select(Binomial, populationTrend, systems, Taxon, Delta_Status, status_impr)
+
+
+  
+inplace <- read.csv("data/redlist/rl_cons_inplace_2019.csv", stringsAsFactors = F) %>%
+  filter(scientificName %in% species$Binomial) %>% 
+  dplyr::select(2,21,23:33)
+
+inplace <- inplace %>% 
+  rename("Binomial" = "scientificName") 
+
+inplace <- full_join(inplace, species, by = "Binomial")
+
+inplace %>% 
+   dplyr::select(-ProtectPercent) 
+
+inplace[inplace == "" ] <- "No"
+inplace[inplace == "Unknown " ] <- "No"
+inplace[inplace == "Unknown" ] <- "No"
+inplace[inplace == "Not Applicable" ] <- "No"
+
+str(inplace)
+
+inplace <- inplace %>%
+  mutate_if(sapply(inplace, is.character), as.factor)
+
+levels(inplace$populationTrend)
+inplace$populationTrend[inplace$populationTrend == "U" ] <- NA
+
+inplace$populationTrend <- factor(inplace$populationTrend, levels=c("Decreasing", "Stable", "Increasing"), ordered=TRUE)
+
+inplace$status_impr <- factor(inplace$status_impr, levels=c("declined", "unchanged", "improved"), ordered=TRUE)
+
+ftable(xtabs(~ populationTrend + ProtectedAreas, data = inplace))
+
+mod <- polr(status_impr ~ ProtectedAreas, data = inplace, Hess=TRUE)
+confint(mod)
+
+## Make a tibble with just predictors and responses for each test
+
+trend <- inplace %>% 
+   dplyr::select(-c(Binomial, Delta_Status, status_impr, Taxon, systems, ProtectPercent)) %>% 
+  drop_na()
+
+mod_trend <- polr(populationTrend ~ ., data = trend, Hess=TRUE)
+
+summary(mod_trend, digits = 3)
+## Bad: EducAware, Invasive
+## Good: Harvest, InterLegis 
+
+ctable <- coef(summary(mod_trend, digits = 3))
+
+p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
+ctable <- cbind(ctable, "p value" = p)
+
+ci <- confint(mod_trend)
+
+exp(coef(mod_trend))
+
+summary(update(mod_trend, method = "probit", Hess = TRUE), digits = 3)
+summary(update(mod_trend, method = "logistic", Hess = TRUE), digits = 3)
+summary(update(mod_trend, method = "cloglog", Hess = TRUE), digits = 3)
+
+# Positive: Monitoring, Recovery, International Leg, ConsSites, Harvest
+# Negative: INVASIVE, EDUCAWARE, 
+
+## Monitoring coef = 1.302 
+## With monitoring, the odds of Increasing vs Stable + Decreasing combined are 30% higher
+## And the odds of Increasing + Stable vs Decreasig 30% higher?! 
+
+# "One of the assumptions underlying ordinal logistic (and ordinal probit) regression is that the relationship between each pair of outcome groups is the same. In other words, ordinal logistic regression assumes that the coefficients that describe the relationship between, say, the lowest versus all higher categories of the response variable are the same as those that describe the relationship between the next lowest category and all higher categories, etc. This is called the proportional odds assumption or the parallel regression assumption."
+```
+
+
+Compare to regular binary logistic regression for Increasing v Not Increasing
+```{r}
+## Could do a test for proportional odds but a better choice might be to identify a positive and negative split and compare using simple logistic regression. 
+
+## Decreasing vs Stable and Increasing? Then compare with Ordinal and with Decreasing and Stable vs Increasing 
+
+inplace <- inplace %>% 
+  mutate(trend_pos = case_when(populationTrend == "Increasing" ~ 1, 
+                               populationTrend == "Stable" ~ 0,
+                               populationTrend == "Decreasing" ~ 0) 
+         )
+inplace <- inplace %>% 
+  mutate(trend_neg = case_when(populationTrend == "Increasing" ~ 0, 
+                               populationTrend == "Stable" ~ 0,
+                               populationTrend == "Decreasing" ~ 1) 
+         )
+
+ltrend_pos <- inplace %>% 
+   dplyr::select(-c(Binomial, Delta_Status, status_impr, Taxon, systems, ProtectPercent, trend_neg, populationTrend)) %>% 
+  drop_na()
+
+ltrend_pos <- ltrend_pos %>%
+  mutate_if(sapply(ltrend_pos, is.character), as.factor)
+
+
+logist_trend_mon <- glm(trend_pos ~ Monitoring, family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=ltrend_pos)
+
+logist_trend_pos <- glm(trend_pos ~ ., family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=ltrend_pos)
+
+summary(logist_trend_pos)
+
+logist_trend_null <- glm(trend_pos ~ 1, family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=ltrend_pos)
+
+step(logist_trend_nul,
+     scope = list(upper=logist_trend_pos),
+             direction="both",
+             test="Chisq",
+             data=sel)
+
+
+summary(logist_trend_pos) 
+confint(logist_trend_pos)
+
+pos <- update(logist_trend_pos,.~.-InvasiveCont)
+coefs <- coef(pos)
+confints <- confint(pos)
+conf1090 <- confint(pos, level = .8)
+trend_pos <- cbind(coefs,confints,conf1090)
+
+# write.csv(trend_pos, "data/generated/12a_cons_actions_trend.csv")                          
+## ion trend, only *international legislation* and (no longer) ConsSitesID part, come out as significant and postive. EducAware is marginal and negative
+
+## Let's look at lumping stable with increasing to see what gets us away from decreasing
+ltrend_neg <- inplace %>% 
+   dplyr::select(-c(Binomial, Delta_Status, status_impr, Taxon, systems, ProtectPercent, trend_pos, populationTrend)) %>% 
+  drop_na()
+
+ltrend_neg <- ltrend_neg %>%
+  mutate_if(sapply(ltrend_neg, is.character), as.factor)
+
+logist_trend_neg <- glm(trend_neg ~ ., family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=ltrend_neg)
+summary(logist_trend_neg)
+ 
+## If we lump stable and increasing, EducAwareProg increasing the likelihood of Decreasing, no significant factors to avoid. 
+
+## Let's repeat the model selection procedures from above
+logist_trend_all <- glm(trend_pos ~ ., family=binomial(link='logit'), control=glm.control(maxit=50), data=ltrend_pos)
+
+logist_trend_null <- glm(trend_pos ~ 1, family=binomial(link='logit'), control=glm.control(maxit=50), data=ltrend_pos)
+
+
+step(logist_trend_null,
+     scope = list(upper=logist_trend_all),
+             direction="both",
+             test="Chisq",
+             data=sel)
+
+## Model of increasing trend with significant predictors
+
+mod_log_pos_trend <- glm(trend_pos ~
+                           EducAwareProg + InterLegis + ConsSitesID, family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data=ltrend_pos)
+
+summary(mod_log_pos_trend)
+
+## So, the log odds of an Increasing population trend increase with InterLeg (1.4), and ConsSitesID(part) (1.23), and decrease with EducAware (more strongly associated with the difference between Stable and Decreasing)
+
+exp(coef(mod_log_pos_trend))
+
+## Let's compare these to the Ordinal regression of the same model
+
+mod_ord_pos_trend <- polr(populationTrend ~ EducAwareProg + InterLegis + ConsSitesID, data = trend, Hess=TRUE)
+
+summary(mod_ord_pos_trend)
+exp(coef(mod_ord_pos_trend))
+## Odds of Increasing .18x if EducAware (because stronger on stable->decreasing)
+## Odds of Increasing 2.14x if InterLeg (because weaker on stable->decreasing)
+## Odds of Increasing 2.31x if ConsSiteID
+
+###################################################################
+
+###################################################################
+```
+Upshot
+##  Models agree that International Legislation and having Conservation Sites Identified over part of the range is associated with a better population trend, while Education and Awareness prorams are clearly associated with population going south 
+
+Now, let's move on from populationTrend to status_Imp and Delta_status
+```{r}
+
+status <- inplace %>% 
+  dplyr::select(-c(Binomial, ProtectPercent, populationTrend, trend_pos, trend_neg, systems, Taxon, Delta_Status))
+
+mod_stat <- polr(status_impr ~ ., data = status, Hess=TRUE)
+## glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+mod_impr <- polr(status_impr ~ RecoveryPlan, data = status, Hess=TRUE)
+summary(mod_impr)
+
+## These are weird with so few in the extreme categories
+
+```
+
+Move on to lumping declinining and unchanged to isolate those with improving status and run a binary logistic regression
+
+```{r}
+
+status <- status %>% 
+  mutate(impr_pos = ifelse(status_impr == "improved", 1, 0)) %>% 
+  dplyr::select(-status_impr)
+
+mod_log_impr <- glm(impr_pos ~., family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data = status)
+
+confint(mod_log_impr)
+summary(mod_log_impr)
+
+mod_log_red <- update(mod_log_impr, .~.-ConsSitePlan)
+mod_log_red <- update(mod_log_red, .~.-InvasiveCont)
+confint(mod_log_red)
+summary(mod_log_red)
+
+mod_log_null <- glm(impr_pos ~ 1, family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data = status)
+
+step(mod_log_null,
+     scope = list(upper=mod_log_impr),
+             direction="both",
+             test="Chisq",
+             data=sel)
+
+## Coefficients:
+##     (Intercept)     InterLegisYes  EducAwareProgYes  
+##         -5.112             2.153           -18.077  
+##      HarvestYes   RecoveryPlanYes         ExSituYes  
+##           1.845             1.804           -17.276 
+
+
+# Create a binomial bmodel with just the important variables
+
+status$impr_pos <- as.factor(status$impr_pos)
+
+mod_logist_impr_red <- glm(impr_pos ~ RecoveryPlan + InterLegis + Harvest + ExSitu, family=binomial(link='logit'),
+                           control=glm.control(maxit=50), data = status)
+
+summary(mod_logist_impr_red)
+coef(mod_logist_impr_red)
+confint(mod_logist_impr_red)
+
+mod_temp <- glm(impr_pos ~ InterLegis + Harvest + ExSitu + RecoveryPlan + Monitoring + InterTrade +
+                  ProtectedAreas,
+                family=binomial(link='logit'),
+                     control=glm.control(maxit=50), data = status)
+cf_impr <- coef(mod_temp)
+cn_impr <-confint(mod_temp)
+cn1090_impr <-confint(mod_temp, level = .8)
+impr_digits <- cbind(cf_impr, cn_impr, cn1090_impr)
+
+# write.csv(impr_digits, "data/generated/12c_cons_actions_impr.csv")
+## EducAware completely absent in any that improved so can't be estimated but not good
+
+step(mod_log_null,
+     scope = list(upper=mod_logist_impr_red),
+             direction="both",
+             test="Chisq",
+             data=sel)
+
+## After selection 
+
+mod_impr_best <- glm(impr_pos ~ InterLegis + Harvest, family = binomial(link = "logit"), 
+    data = status, control = glm.control(maxit = 50))
+
+summary(mod_impr_best)
+
+coef(mod_impr_best)
+confint(mod_impr_best)
+
+exp(coef(mod_impr_best))
+```
+
+Upshot
+As, with "our" conservation actions, harvest management increases the likelihood of an improvement in status but now, International too. 
+
+
+
+

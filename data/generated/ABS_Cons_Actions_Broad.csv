@@ -1,0 +1,36 @@
+﻿Binomial,Common,Direction,legal,human,mortality,reproduction,resources
+Sarcogyps calvus,Red-headed Vulture,Neg,1,1,1,1,1
+Gyps africanus,White-backed Vulture,Neg,1,1,1,0,0
+Gyps rueppelli,Rüppell's Vulture,Neg,1,1,1,0,0
+Aquila nipalensis,Steppe Eagle,Neg,1,0,0,0,0
+Neophoca cinerea,Australian Sea Lion,Neg,1,0,1,0,1
+Neophron percnopterus,Egyptian Vulture,Neg,1,1,1,1,1
+Trigonoceps occipitalis,White-headed Vulture,Neg,1,1,1,0,0
+Necrosyrtes monachus,Hooded Vulture,Neg,1,0,1,0,0
+Arctocephalus galapagoensis,Galápagos Fur Seal,Neg,1,0,1,0,1
+Polemaetus bellicosus,Martial Eagle,Neg,1,1,0,0,0
+Gyps coprotheres,Cape Vulture,Neg,1,1,1,1,1
+Milvus milvus,Red Kite,Neg,1,0,0,1,1
+Phocarctos hookeri,New Zealand Sea Lion,Neg,1,0,1,0,1
+Spizaetus ornatus,Ornate Hawk-eagle,Neg,1,0,0,0,0
+Zalophus wollebaeki,Galápagos Sea Lion,Neg,1,0,1,0,1
+Crocodylus rhombifer,Cuban Crocodile,Neg,1,0,1,1,0
+Gavialis gangeticus,Gharial,Neg,1,1,0,1,1
+Huso dauricus,Kaluga,Neg,1,0,1,0,0
+Huso huso,Beluga,Neg,1,0,1,1,1
+Hyporthodus ergastularius,Banded Rockcod,Neg,0,0,1,0,0
+Thunnus albacares,Yellowfin Tuna,Neg,1,0,1,0,0
+Torgos tracheliotos,Lappet-faced Vulture,Neg,1,1,1,0,0
+Panthera pardus,Leopard,Neg,1,1,1,1,1
+Eumetopias jubatus,Steller Sea Lion,Pos,0,0,0,0,0
+Arctocephalus philippii,Juan Fernández Fur Seal,Pos,1,0,1,0,0
+Arctocephalus townsendi,Guadalupe Fur Seal,Pos,1,0,0,0,1
+Eubalaena australis,Southern Right Whale,Pos,1,0,1,0,1
+Eschrichtius robustus,Gray Whale,Pos,1,1,1,0,1
+Haliaeetus albicilla,White-tailed Sea-eagle,Pos,1,0,1,0,0
+Balaenoptera physalus,Fin Whale,Pos,1,0,1,0,0
+Dipturus innominatus,Smooth Skate,Pos,1,0,1,0,0
+Megaptera novaeangliae,Humpback Whale,Pos,1,0,1,0,1
+Melanosuchus niger,Black Caiman,Pos,1,0,1,1,1
+Lynx pardinus,Iberian lynx,Pos,1,1,1,1,1
+Balaena mysticetus,Bowhead Whale,Pos,1,0,1,0,0

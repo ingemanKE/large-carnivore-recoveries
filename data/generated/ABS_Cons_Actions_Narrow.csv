@@ -1,0 +1,36 @@
+﻿Binomial,Common,Direction,harvest,refuge,accidental,captive breeding,relocation,reintroduction,habitat restoration,habitat protection,prey,education,conflict mitigation,livelihood,national,international,recovery plan
+Sarcogyps calvus,Red-headed Vulture,Neg,n,n,y,y,n,y,n,y,n,y,n,n,n,y,y
+Gyps africanus,White-backed Vulture,Neg,n,n,y,n,n,n,n,n,n,y,n,n,n,y,y
+Gyps rueppelli,Rüppell's Vulture,Neg,n,n,y,n,n,n,n,n,n,y,n,n,n,y,n
+Aquila nipalensis,Steppe Eagle,Neg,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n
+Neophoca cinerea,Australian Sea Lion,Neg,n,n,y,n,n,n,n,y,n,n,n,n,y,n,n
+Neophron percnopterus,Egyptian Vulture,Neg,n,n,y,y,n,n,n,y,y,y,n,n,n,y,y
+Trigonoceps occipitalis,White-headed Vulture,Neg,n,n,y,n,n,n,n,n,n,y,n,n,n,y,n
+Necrosyrtes monachus,Hooded Vulture,Neg,n,n,y,n,n,n,n,n,n,n,n,n,n,y,n
+Arctocephalus galapagoensis,Galápagos Fur Seal,Neg,n,n,y,n,n,n,n,y,n,n,n,n,y,y,n
+Polemaetus bellicosus,Martial Eagle,Neg,n,n,n,n,n,n,n,n,n,n,n,y,n,y,n
+Gyps coprotheres,Cape Vulture,Neg,n,n,y,y,n,n,n,n,y,y,n,n,n,y,y
+Milvus milvus,Red Kite,Neg,n,n,n,n,n,y,n,n,y,n,n,n,n,y,y
+Phocarctos hookeri,New Zealand Sea Lion,Neg,n,n,y,n,n,n,n,y,n,n,n,n,y,n,n
+Spizaetus ornatus,Ornate Hawk-eagle,Neg,n,n,n,n,n,n,n,n,n,n,n,n,n,y,n
+Zalophus wollebaeki,Galápagos Sea Lion,Neg,n,n,y,n,n,n,n,y,n,n,n,n,y,n,n
+Crocodylus rhombifer,Cuban Crocodile,Neg,y,y,n,y,n,y,n,n,n,n,n,n,y,y,n
+Gavialis gangeticus,Gharial,Neg,n,n,n,y,n,y,n,y,n,y,n,n,y,y,y
+Huso dauricus,Kaluga,Neg,y,n,n,n,n,n,n,n,n,n,n,n,y,y,n
+Huso huso,Beluga,Neg,y,y,n,y,n,y,n,y,n,n,n,n,n,y,n
+Hyporthodus ergastularius,Banded Rockcod,Neg,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+Thunnus albacares,Yellowfin Tuna,Neg,y,n,n,n,n,n,n,n,n,n,n,n,y,y,n
+Torgos tracheliotos,Lappet-faced Vulture,Neg,n,n,y,n,n,n,n,n,n,y,n,n,y,y,y
+Panthera pardus,Leopard,Neg,y,y,n,y,y,y,n,y,n,y,y,n,y,y,y
+Eumetopias jubatus,Steller Sea Lion,Pos,y,y,n,n,n,n,n,y,y,n,n,n,y,y,n
+Arctocephalus philippii,Juan Fernández Fur Seal,Pos,n,y,n,n,n,n,n,n,n,n,n,n,y,y,n
+Arctocephalus townsendi,Guadalupe Fur Seal,Pos,n,n,n,n,n,n,n,y,n,n,n,n,y,n,n
+Eubalaena australis,Southern Right Whale,Pos,y,n,y,n,n,n,n,y,n,n,n,n,y,y,n
+Eschrichtius robustus,Gray Whale,Pos,y,n,y,n,n,n,n,y,n,y,n,n,y,y,n
+Haliaeetus albicilla,White-tailed Sea-eagle,Pos,n,n,n,n,n,n,n,n,n,n,n,n,n,y,y
+Balaenoptera physalus,Fin Whale,Pos,y,n,n,n,n,n,n,n,n,n,n,n,y,y,n
+Dipturus innominatus,Smooth Skate,Pos,y,n,n,n,n,n,n,n,n,n,n,n,y,y,n
+Megaptera novaeangliae,Humpback Whale,Pos,y,y,n,n,n,n,n,n,y,n,n,n,y,y,y
+Melanosuchus niger,Black Caiman,Pos,y,n,n,y,n,n,n,y,n,n,n,n,y,y,n
+Lynx pardinus,Iberian lynx,Pos,n,y,y,y,y,y,y,y,y,y,y,y,y,y,y
+Balaena mysticetus,Bowhead Whale,Pos,y,n,n,n,n,n,n,n,n,n,n,n,y,y,n

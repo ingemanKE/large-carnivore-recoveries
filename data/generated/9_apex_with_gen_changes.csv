@@ -1,0 +1,366 @@
+Binomial,Common,redlistCategory,populationTrend,systems,Taxon,Delta_Status,Most_Recent_Change,is_geniune
+Sarcogyps calvus,Red-headed Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,-4,-4,genuine
+Gyps africanus,White-backed Vulture,Critically Endangered,Decreasing,"Freshwater,Terrestrial",Birds,-3,-3,genuine
+Gyps rueppelli,R�ppell's Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,-3,-3,genuine
+Aquila nipalensis,Steppe Eagle,Endangered,Decreasing,Terrestrial,Birds,-3,-3,genuine
+Neophoca cinerea,Australian Sea Lion,Endangered,Decreasing,"Marine,Terrestrial",MarineMam,-3,-3,genuine
+Neophron percnopterus,Egyptian Vulture,Endangered,Decreasing,"Freshwater,Terrestrial",Birds,-3,-3,genuine
+Trigonoceps occipitalis,White-headed Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,-2,-2,genuine
+Necrosyrtes monachus,Hooded Vulture,Critically Endangered,Decreasing,"Freshwater,Terrestrial",Birds,-1,-1,genuine
+Arctocephalus galapagoensis,Galapagos Fur Seal,Endangered,Decreasing,"Marine,Terrestrial",MarineMam,-1,-1,genuine
+Polemaetus bellicosus,Martial Eagle,Vulnerable,Decreasing,"Freshwater,Terrestrial",Birds,-1,-1,genuine
+Gyps coprotheres,Cape Vulture,Endangered,Decreasing,Terrestrial,Birds,-1,-1,genuine
+Milvus milvus,Red Kite,Near Threatened,Decreasing,Terrestrial,Birds,-1,-1,genuine
+Phocarctos hookeri,New Zealand Sea Lion,Endangered,Decreasing,"Marine,Terrestrial",MarineMam,-1,-1,genuine
+Spizaetus ornatus,Ornate Hawk-eagle,Near Threatened,Decreasing,Terrestrial,Birds,-1,-1,genuine
+Zalophus wollebaeki,Galápagos Sea Lion,Endangered,Decreasing,"Marine,Terrestrial",MarineMam,-1,-1,genuine
+Huso dauricus,Kaluga,Critically Endangered,Decreasing,"Marine,Freshwater",Bony,-1,-1,genuine
+Huso huso,Beluga,Critically Endangered,Decreasing,"Marine,Freshwater",Bony,-1,-1,genuine
+Hyporthodus ergastularius,Sevenbar Grouper,Near Threatened,Decreasing,Marine,Bony,-1,-1,genuine
+Thunnus albacares,Yellowfin Tuna,Near Threatened,Decreasing,Marine,Bony,-1,-1,genuine
+Torgos tracheliotos,Lappet-faced Vulture,Endangered,Decreasing,Terrestrial,Birds,-1,-1,genuine
+Panthera pardus,Leopard,Vulnerable,Decreasing,Terrestrial,LandMam,-1,-1,genuine
+Gavialis gangeticus,Gharial,Critically Endangered,Increasing,"Freshwater,Terrestrial",ReptAmph,-1,-1,genuine
+Crocodylus rhombifer,Cuban Crocodile,Critically Endangered,U,"Freshwater,Terrestrial",ReptAmph,-1,-1,genuine
+Aaptosyax grypus,Mekong Giant Salmon Carp,Critically Endangered,Decreasing,Freshwater,Bony,0,0,NA
+Accipiter henstii,Henst's Goshawk,Near Threatened,Decreasing,Terrestrial,Birds,0,0,NA
+Acinonyx jubatus,Cheetah,Vulnerable,Decreasing,Terrestrial,LandMam,0,0,NA
+Aegypius monachus,Cinereous Vulture,Near Threatened,Decreasing,Terrestrial,Birds,0,0,NA
+Aetobatus narinari,Spotted Eagle Ray,Near Threatened,Decreasing,Marine,Elasmo,0,0,NA
+Alopias pelagicus,Pelagic Thresher,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Alopias superciliosus,Bigeye Thresher Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Alopias vulpinus,Common Thresher Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Andrias davidianus,Chinese Giant Salamander,Critically Endangered,Decreasing,Freshwater,ReptAmph,0,0,NA
+Aquila africana,Cassin's Hawk-eagle,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Aquila fasciata,Bonelli's Eagle,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Aquila heliaca,Eastern Imperial Eagle,Vulnerable,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Aquila spilogaster,African Hawk-eagle,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Arctocephalus gazella,Antarctic Fur Seal,Least Concern,Decreasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Bubo bubo,Eurasian Eagle-owl,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Buteogallus schistaceus,Slate-colored Hawk,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Callorhinus ursinus,Northern Fur Seal,Vulnerable,Decreasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Canis rufus,Red Wolf,Critically Endangered,Decreasing,Terrestrial,LandMam,0,0,NA
+Carcharhinus signatus,Night Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Cathartes melambrotus,Greater Yellow-headed Vulture,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Cephalorhynchus eutropia,Chilean Dolphin,Near Threatened,Decreasing,"Marine,Freshwater",MarineMam,0,0,NA
+Circaetus beaudouini,Beaudouin's Snake-eagle,Vulnerable,Decreasing,Terrestrial,Birds,0,0,NA
+Circaetus cinereus,Brown Snake-eagle,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Circaetus fasciolatus,Southern Banded Snake-eagle,Near Threatened,Decreasing,Terrestrial,Birds,0,0,NA
+Clanga hastata,Indian Spotted Eagle,Vulnerable,Decreasing,Terrestrial,Birds,0,0,NA
+Crocodylus intermedius,Orinoco Crocodile,Critically Endangered,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Crocodylus mindorensis,Philippine Crocodile,Critically Endangered,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Crocodylus siamensis,Siamese Crocodile,Critically Endangered,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Cyclura cornuta,Rhinoceros Iguana,Vulnerable,Decreasing,Terrestrial,ReptAmph,0,0,NA
+Cyclura stejnegeri,Mona Rhinoceros Iguana,Endangered,Decreasing,Terrestrial,ReptAmph,0,0,NA
+Epinephelus lanceolatus,Giant Grouper,Data Deficient,Decreasing,Marine,Bony,0,0,NA
+Eubalaena glacialis,North Atlantic Right Whale,Endangered,Decreasing,Marine,MarineMam,0,0,NA
+Galeocerdo cuvier,Tiger Shark,Near Threatened,Decreasing,Marine,Elasmo,0,0,NA
+Gymnura altavela,Spiny Butterfly Ray,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Gyps indicus,Indian Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,0,0,NA
+Gyps tenuirostris,Slender-billed Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,0,0,NA
+Haliaeetus leucogaster,White-bellied Sea-eagle,Least Concern,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Haliaeetus pelagicus,Steller's Sea-eagle,Vulnerable,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Haliaeetus sanfordi,Sanford's Sea-eagle,Vulnerable,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Haliaeetus vociferoides,Madagascar Fish-eagle,Critically Endangered,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Hamirostra melanosternon,Black-breasted Buzzard,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Harpia harpyja,Harpy Eagle,Near Threatened,Decreasing,Terrestrial,Birds,0,0,NA
+Harpyopsis novaeguineae,Papuan Eagle,Vulnerable,Decreasing,Terrestrial,Birds,0,0,NA
+Hemipristis elongata,Fossil Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Hucho taimen,Siberian Taimen,Vulnerable,Decreasing,Freshwater,Bony,0,0,NA
+Ictinaetus malaiensis,Black Eagle,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Isurus paucus,Longfin Mako,Endangered,Decreasing,Marine,Elasmo,0,0,NA
+Kajikia albida,White Marlin,Vulnerable,Decreasing,Marine,Bony,0,0,NA
+Kajikia audax,Striped Marlin,Near Threatened,Decreasing,Marine,Bony,0,0,NA
+Ketupa zeylonensis,Brown Fish-owl,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Lates angustifrons,Tanganyika Lates,Endangered,Decreasing,Freshwater,Bony,0,0,NA
+Lutjanus cyanopterus,Cubera Snapper,Vulnerable,Decreasing,Marine,Bony,0,0,NA
+Makaira nigricans,Blue Marlin,Vulnerable,Decreasing,Marine,Bony,0,0,NA
+Megalops atlanticus,Tarpon,Vulnerable,Decreasing,Marine,Bony,0,0,NA
+Morelia spilota,Western Australian Carpet Python,Least Concern,Decreasing,Terrestrial,ReptAmph,0,0,NA
+Morphnarchus princeps,Barred Hawk,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Morphnus guianensis,Crested Eagle,Near Threatened,Decreasing,Terrestrial,Birds,0,0,NA
+Mycteroperca bonaci,Black Grouper,Near Threatened,Decreasing,Marine,Bony,0,0,NA
+Mycteroperca xenarcha,Broomtail Grouper,Data Deficient,Decreasing,Marine,Bony,0,0,NA
+Nebrius ferrugineus,Tawny Nurse Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Negaprion acutidens,Sharptooth Lemon Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Neofelis nebulosa,Clouded Leopard,Vulnerable,Decreasing,Terrestrial,LandMam,0,0,NA
+Nisaetus cirrhatus,Changeable Hawk-eagle,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Nisaetus nipalensis,Mountain Hawk-eagle,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Nisaetus philippensis,North Philippine Hawk-eagle,Endangered,Decreasing,Terrestrial,Birds,0,0,NA
+Odontaspis ferox,Smalltooth Sand Tiger,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Panthera leo,Lion,Vulnerable,Decreasing,Terrestrial,LandMam,0,0,NA
+Panthera tigris,Tiger,Endangered,Decreasing,Terrestrial,LandMam,0,0,NA
+Petrus rupestris,Red Steenbras,Endangered,Decreasing,Marine,Bony,0,0,NA
+Pithecophaga jefferyi,Philippine Eagle,Critically Endangered,Decreasing,Terrestrial,Birds,0,0,NA
+Ptyas carinata,Keeled Rat Snake,Least Concern,Decreasing,Terrestrial,ReptAmph,0,0,NA
+Python bivittatus,Burmese Python,Vulnerable,Decreasing,Terrestrial,ReptAmph,0,0,NA
+Rhynchobatus luebberti,African Wedgefish,Endangered,Decreasing,Marine,Elasmo,0,0,NA
+Rostroraja alba,White Skate,Endangered,Decreasing,Marine,Elasmo,0,0,NA
+Salmo marmoratus,NA,Least Concern,Decreasing,Freshwater,Bony,0,0,NA
+Sarcoramphus papa,King Vulture,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Scomberomorus commerson,Narrow-barred Spanish Mackerel,Near Threatened,Decreasing,Marine,Bony,0,0,NA
+Scotopelia peli,Pel's Fishing-owl,Least Concern,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Sphyrna mokarran,Great Hammerhead,Endangered,Decreasing,Marine,Elasmo,0,0,NA
+Spizaetus tyrannus,Black Hawk-eagle,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Strix leptogrammica,Brown Wood-owl,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Taeniurops meyeni,Blotched Fantail Ray,Vulnerable,Decreasing,Marine,Elasmo,0,0,NA
+Thunnus alalunga,Albacore Tuna,Near Threatened,Decreasing,Marine,Bony,0,0,NA
+Thunnus obesus,Bigeye Tuna,Vulnerable,Decreasing,Marine,Bony,0,0,NA
+Thunnus thynnus,Atlantic Bluefin Tuna,Endangered,Decreasing,Marine,Bony,0,0,NA
+Totoaba macdonaldi,Totoaba,Critically Endangered,Decreasing,"Marine,Freshwater",Bony,0,0,NA
+Xiphias gladius,Swordfish,Least Concern,Decreasing,Marine,Bony,0,0,NA
+Bubo nipalensis,Spot-bellied Eagle-owl,Least Concern,Decreasing,Terrestrial,Birds,0,0,NA
+Gyps bengalensis,White-rumped Vulture,Critically Endangered,Decreasing,Terrestrial,Birds,0,0,NA
+Mecistops cataphractus,Slender-snouted Crocodile,Critically Endangered,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,0,non-genuine
+Thunnus orientalis,Pacific Bluefin Tuna,Vulnerable,Decreasing,Marine,Bony,0,0,non-genuine
+Bubo shelleyi,Shelley's Eagle-owl,Vulnerable,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Carcharhinus falciformis,Silky Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Epinephelus marginatus,Dusky Grouper,Vulnerable,Decreasing,Marine,Bony,0,0,non-genuine
+Carcharhinus albimarginatus,Silvertip Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Isurus oxyrinchus,Shortfin Mako,Endangered,Decreasing,Marine,Elasmo,0,0,non-genuine
+Mycteroperca jordani,Gulf Grouper,Endangered,Decreasing,Marine,Bony,0,0,non-genuine
+Sciades parkeri,Gillbacker Sea Catfish,Vulnerable,Decreasing,"Marine,Freshwater",Bony,0,0,non-genuine
+Sphyrna zygaena,Smooth Hammerhead,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Aonyx congicus,Congo Clawless Otter,Near Threatened,Decreasing,"Freshwater,Terrestrial",LandMam,0,0,non-genuine
+Buteogallus solitarius,Black Solitary Eagle,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Carcharhinus plumbeus,Sandbar Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Gypaetus barbatus,Bearded Vulture,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Anoxypristis cuspidata,Narrow Sawfish,Endangered,Decreasing,Marine,Elasmo,0,0,non-genuine
+Ketupa flavipes,Tawny Fish-owl,Least Concern,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Neomonachus schauinslandi,Hawaiian Monk Seal,Endangered,Decreasing,"Marine,Terrestrial",MarineMam,0,0,non-genuine
+Puma concolor,Puma,Least Concern,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Carcharhinus obscurus,Dusky Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Epinephelus malabaricus,Malabar Grouper,Least Concern,Decreasing,Marine,Bony,0,0,non-genuine
+Tomistoma schlegelii,False Gharial,Vulnerable,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,0,non-genuine
+Epinephelus itajara,Atlantic Goliath Grouper,Vulnerable,Decreasing,Marine,Bony,0,0,non-genuine
+Squatina squatina,Angelshark,Critically Endangered,Decreasing,Marine,Elasmo,0,0,non-genuine
+Carcharhinus longimanus,Oceanic Whitetip Shark,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Pristis pectinata,Smalltooth Sawfish,Critically Endangered,Decreasing,Marine,Elasmo,0,0,non-genuine
+Lamna nasus,Porbeagle,Vulnerable,Decreasing,Marine,Elasmo,0,0,non-genuine
+Andrias japonicus,Japanese Giant Salamander,Near Threatened,Decreasing,Freshwater,ReptAmph,0,0,non-genuine
+Aquila rapax,Tawny Eagle,Vulnerable,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Bubo scandiacus,Snowy Owl,Vulnerable,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Clanga clanga,Greater Spotted Eagle,Vulnerable,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Sagittarius serpentarius,Secretarybird,Vulnerable,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Sousa teuszii,Atlantic Humpbacked Dolphin,Critically Endangered,Decreasing,"Marine,Freshwater",MarineMam,0,0,non-genuine
+Aonyx capensis,African Clawless Otter,Near Threatened,Decreasing,"Marine,Freshwater,Terrestrial",LandMam,0,0,non-genuine
+Aquila gurneyi,Gurney's Eagle,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Buteogallus coronatus,Crowned Solitary Eagle,Endangered,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Cuon alpinus,Dhole,Endangered,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Haliaeetus leucoryphus,Pallas's Fish-eagle,Endangered,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Lycaon pictus,African Wild Dog,Endangered,Decreasing,NA,LandMam,0,0,non-genuine
+Megatriorchis doriae,Doria's Goshawk,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Nesasio solomonensis,Fearful Owl,Vulnerable,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Nisaetus floris,Flores Hawk-eagle,Critically Endangered,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Orcaella brevirostris,Irrawaddy Dolphin,Endangered,Decreasing,"Marine,Freshwater",MarineMam,0,0,non-genuine
+Pteronura brasiliensis,Giant Otter,Endangered,Decreasing,"Freshwater,Terrestrial",LandMam,0,0,non-genuine
+Sousa chinensis,Indo-Pacific Humpbacked Dolphin,Vulnerable,Decreasing,"Marine,Freshwater",MarineMam,0,0,non-genuine
+Stephanoaetus coronatus,Crowned Eagle,Near Threatened,Decreasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Terathopius ecaudatus,Bateleur,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Vultur gryphus,Andean Condor,Near Threatened,Decreasing,Terrestrial,Birds,0,0,non-genuine
+Canis simensis,Ethiopian Wolf,Endangered,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Crocuta crocuta,Spotted Hyaena,Least Concern,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Panthera onca,Jaguar,Near Threatened,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Panthera uncia,Snow Leopard,Vulnerable,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Pardofelis marmorata,Marbled Cat,Near Threatened,Decreasing,Terrestrial,LandMam,0,0,non-genuine
+Aquila audax,Wedge-tailed Eagle,Least Concern,Increasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Arctocephalus australis,South American Fur Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Arctocephalus forsteri,New Zealand Fur Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Arctocephalus pusillus,Afro-Australian Fur Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Balaenoptera musculus,Blue Whale,Endangered,Increasing,Marine,MarineMam,0,0,NA
+Buteo jamaicensis,Red-tailed Hawk,Least Concern,Increasing,Terrestrial,Birds,0,0,NA
+Caracara cheriway,Crested Caracara,Least Concern,Increasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Caracara plancus,Southern Caracara,Least Concern,Increasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Conger conger,Conger Eel,Least Concern,Increasing,Marine,Bony,0,0,NA
+Coragyps atratus,American Black Vulture,Least Concern,Increasing,Terrestrial,Birds,0,0,NA
+Crocodylus acutus,American Crocodile,Vulnerable,Increasing,"Marine,Freshwater,Terrestrial",ReptAmph,0,0,NA
+Gymnogyps californianus,California Condor,Critically Endangered,Increasing,Terrestrial,Birds,0,0,NA
+Gyps fulvus,Griffon Vulture,Least Concern,Increasing,Terrestrial,Birds,0,0,NA
+Haliaeetus leucocephalus,Bald Eagle,Least Concern,Increasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Halichoerus grypus,Grey Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Ictalurus punctatus,Channel Catfish,Least Concern,Increasing,Freshwater,Bony,0,0,NA
+Lophaetus occipitalis,Long-crested Eagle,Least Concern,Increasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Mirounga angustirostris,Northern Elephant Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Pagophilus groenlandicus,Harp Seal,Least Concern,Increasing,Marine,MarineMam,0,0,NA
+Pandion haliaetus,Osprey,Least Concern,Increasing,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Strix nebulosa,Great Grey Owl,Least Concern,Increasing,"Freshwater,Terrestrial",Birds,0,0,NA
+Zalophus californianus,Californian Sea Lion,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,0,0,NA
+Buteo regalis,Ferruginous Hawk,Least Concern,Increasing,Terrestrial,Birds,0,0,non-genuine
+Aquila adalberti,Spanish Imperial Eagle,Vulnerable,Increasing,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Balaenoptera borealis,Sei Whale,Endangered,Increasing,Marine,MarineMam,0,0,non-genuine
+Monachus monachus,Mediterranean Monk Seal,Endangered,Increasing,"Marine,Terrestrial",MarineMam,0,0,non-genuine
+Acanthocybium solandri,Wahoo,Least Concern,Stable,Marine,Bony,0,0,NA
+Alligator sinensis,Chinese Alligator,Critically Endangered,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Apodora papuana,Papuan Olive Python,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Aquila chrysaetos,Golden Eagle,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Aquila verreauxii,Verreaux's Eagle,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Arctocephalus tropicalis,Subantarctic Fur Seal,Least Concern,Stable,"Marine,Terrestrial",MarineMam,0,0,NA
+Bubo ascalaphus,Pharaoh Eagle-owl,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,NA
+Bubo bengalensis,Rock Eagle-owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Bubo capensis,Cape Eagle-owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Bubo lacteus,Verreaux's Eagle-owl,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,NA
+Bubo magellanicus,Magellanic Horned Owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Bubo sumatranus,Barred Eagle-owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Bubo virginianus,Great Horned Owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Buteo augur,Augur Buzzard,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Buteo galapagoensis,Galapagos Hawk,Vulnerable,Stable,"Marine,Terrestrial",Birds,0,0,NA
+Buteo hemilasius,Upland Buzzard,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Buteo rufinus,Long-legged Buzzard,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Buteo rufofuscus,Jackal Buzzard,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Buteo socotraensis,Socotra Buzzard,Vulnerable,Stable,Terrestrial,Birds,0,0,NA
+Buteogallus urubitinga,Great Black Hawk,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Caiman crocodilus,Common Caiman,Least Concern,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Carcharhinus tilstoni,Australian Blacktip Shark,Least Concern,Stable,Marine,Elasmo,0,0,NA
+Cathartes aura,Turkey Vulture,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Cathartes burrovianus,Lesser Yellow-headed Vulture,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,NA
+Circaetus gallicus,Short-toed Snake-eagle,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Clanga pomarina,Lesser Spotted Eagle,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Crocodylus palustris,Mugger,Vulnerable,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Dendroaspis polylepis,Black Mamba,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Dolichophis jugularis,Large Whip Snake,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Dolichophis schmidti,Schmidt's Whip Snake,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Esox lucius,Northern Pike,Least Concern,Stable,Freshwater,Bony,0,0,NA
+Esox masquinongy,Muskellunge,Least Concern,Stable,Freshwater,Bony,0,0,NA
+Geranoaetus melanoleucus,Black-chested Buzzard-eagle,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Gypohierax angolensis,Palm-nut Vulture,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,NA
+Haliaeetus vocifer,African Fish-eagle,Least Concern,Stable,"Marine,Freshwater,Terrestrial",Birds,0,0,NA
+Ketupa ketupu,Buffy Fish-owl,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,NA
+Lamna ditropis,Salmon Shark,Least Concern,Stable,Marine,Elasmo,0,0,NA
+Lepisosteus osseus,Longnose Gar,Least Concern,Stable,Freshwater,Bony,0,0,NA
+Lycalopex culpaeus,Culpeo,Least Concern,Stable,Terrestrial,LandMam,0,0,NA
+Lynx rufus,Bobcat,Least Concern,Stable,Terrestrial,LandMam,0,0,NA
+Mirounga leonina,Southern Elephant Seal,Least Concern,Stable,"Marine,Terrestrial",MarineMam,0,0,NA
+Morelia amethistina,Amethystine Python,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Morelia bredli,Centralian Carpet Python,Least Concern,Stable,Terrestrial,ReptAmph,0,0,NA
+Otaria byronia,South American Sea Lion,Least Concern,Stable,"Marine,Terrestrial",MarineMam,0,0,NA
+Phalcoboenus australis,Striated Caracara,Near Threatened,Stable,"Marine,Terrestrial",Birds,0,0,NA
+Polydactylus quadrifilis,Giant African threadfin,Least Concern,Stable,Marine,Bony,0,0,NA
+Ruvettus pretiosus,Oilfish,Least Concern,Stable,Marine,Bony,0,0,NA
+Seriola lalandi,Yellowtail Amberjack,Least Concern,Stable,Marine,Bony,0,0,NA
+Seriola rivoliana,Longfin Yellowtail,Least Concern,Stable,Marine,Bony,0,0,NA
+Strix seloputo,Spotted Wood-owl,Least Concern,Stable,Terrestrial,Birds,0,0,NA
+Tetrapturus belone,Mediterranean Shortbill Spearfish,Least Concern,Stable,Marine,Bony,0,0,NA
+Tetrapturus pfluegeri,Longbill Spearfish,Least Concern,Stable,Marine,Bony,0,0,NA
+Crocodylus johnstoni,Australian freshwater Crocodile,Least Concern,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Crocodylus niloticus,Nile Crocodile,Least Concern,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Lynx lynx,Eurasian Lynx,Least Concern,Stable,Terrestrial,LandMam,0,0,non-genuine
+Ninox strenua,Powerful Owl,Least Concern,Stable,"Freshwater,Terrestrial",Birds,0,0,non-genuine
+Crocodylus moreletii,Morelet's Crocodile,Least Concern,Stable,"Freshwater,Terrestrial",ReptAmph,0,0,non-genuine
+Parahyaena brunnea,Brown Hyaena,Near Threatened,Stable,Terrestrial,LandMam,0,0,non-genuine
+Buteo ventralis,Rufous-tailed Hawk,Vulnerable,Stable,Terrestrial,Birds,0,0,non-genuine
+Gyps himalayensis,Himalayan Griffon,Near Threatened,Stable,Terrestrial,Birds,0,0,non-genuine
+Falco rusticolus,Gyrfalcon,Least Concern,Stable,"Marine,Terrestrial",Birds,0,0,non-genuine
+Pusa sibirica,Baikal Seal,Least Concern,Stable,"Freshwater,Terrestrial",LandMam,0,0,non-genuine
+Canis lupus,Gray Wolf,Least Concern,Stable,Terrestrial,LandMam,0,0,non-genuine
+Alligator mississippiensis,American Alligator,Least Concern,U,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Argyrosomus hololepidotus,Madagascar Kob,Endangered,U,Marine,Bony,0,0,NA
+Argyrosomus regius,Meagre,Least Concern,U,Marine,Bony,0,0,NA
+Bagrus docmak,Sudan Catfish,Least Concern,U,Freshwater,Bony,0,0,NA
+Benthodesmus tenuis,NA,Least Concern,U,Marine,Bony,0,0,NA
+Brachyplatystoma rousseauxii,Gilded Catfish,Least Concern,U,Freshwater,Bony,0,0,NA
+Caiman latirostris,Broad-snouted Caiman,Least Concern,U,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Caiman yacare,Yacaré,Least Concern,U,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Caracal caracal,Caracal,Least Concern,U,Terrestrial,LandMam,0,0,NA
+Caranx ignobilis,Giant Trevally,Least Concern,U,Marine,Bony,0,0,NA
+Carcharhinus brachyurus,Copper Shark,Near Threatened,U,"Marine,Freshwater",Elasmo,0,0,NA
+Carcharhinus brevipinna,Spinner Shark,Near Threatened,U,Marine,Elasmo,0,0,NA
+Carcharhinus galapagensis,Galapagos Shark,Near Threatened,U,Marine,Elasmo,0,0,NA
+Carcharhinus leucas,Bull Shark,Near Threatened,U,"Marine,Freshwater",Elasmo,0,0,NA
+Carcharodon carcharias,Great White Shark,Vulnerable,U,Marine,Elasmo,0,0,NA
+Channa marulius,Great snakehead,Least Concern,U,Freshwater,Bony,0,0,NA
+Chitala lopis,Giant Featherback,Least Concern,U,Freshwater,Bony,0,0,NA
+Circaetus pectoralis,Black-chested Snake-eagle,Least Concern,U,Terrestrial,Birds,0,0,NA
+Delphinus delphis,Short-beaked Common Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Echinorhinus cookei,Prickly Shark,Data Deficient,U,Marine,Elasmo,0,0,NA
+Epinephelus tukula,Potato Grouper,Least Concern,U,Marine,Bony,0,0,NA
+Erignathus barbatus,Bearded Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Eubalaena japonica,North Pacific Right Whale,Endangered,U,Marine,MarineMam,0,0,NA
+Feresa attenuata,Pygmy killer whale,Least Concern,U,Marine,MarineMam,0,0,NA
+Gadus morhua,Atlantic Cod,Vulnerable,U,Marine,Bony,0,0,NA
+Grampus griseus,Risso's Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Gymnosarda unicolor,Dogtooth Tuna,Least Concern,U,Marine,Bony,0,0,NA
+Hippoglossus hippoglossus,Atlantic Halibut,Endangered,U,Marine,Bony,0,0,NA
+Histriophoca fasciata,Ribbon Seal,Least Concern,U,Marine,MarineMam,0,0,NA
+Hucho hucho,Danube Salmon,Endangered,U,Freshwater,Bony,0,0,NA
+Hydrurga leptonyx,Leopard Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Hyporthodus mystacinus,Misty Grouper,Least Concern,U,Marine,Bony,0,0,NA
+Istiophorus platypterus,Sailfish,Least Concern,U,Marine,Bony,0,0,NA
+Lagenodelphis hosei,Fraser's Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lagenorhynchus acutus,Atlantic White-sided Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lagenorhynchus albirostris,White-beaked Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lagenorhynchus cruciger,Hourglass Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lagenorhynchus obliquidens,Pacific White-sided Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lampris guttatus,Opah,Least Concern,U,Marine,Bony,0,0,NA
+Lates niloticus,Nile Perch,Least Concern,U,Freshwater,Bony,0,0,NA
+Leptonychotes weddellii,Weddell Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Liasis olivaceus,Olive Python,Least Concern,U,Terrestrial,ReptAmph,0,0,NA
+Lichia amia,Leerfish,Least Concern,U,Marine,Bony,0,0,NA
+Lissodelphis borealis,Northern Right Whale Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Lobodon carcinophaga,Crabeater Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Maccullochella peelii,Murray River Cod,Critically Endangered,U,Freshwater,Bony,0,0,NA
+Mitsukurina owstoni,Goblin Shark,Least Concern,U,Marine,Elasmo,0,0,NA
+Morone saxatilis,Striped Bass,Least Concern,U,"Marine,Freshwater",Bony,0,0,NA
+Negaprion brevirostris,Lemon Shark,Near Threatened,U,"Marine,Freshwater",Elasmo,0,0,NA
+Ommatophoca rossii,Ross Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Ophichthus ophis,Spotted Snake Eel,Least Concern,U,Marine,Bony,0,0,NA
+Ophisurus serpens,Serpent Eel,Least Concern,U,Marine,Bony,0,0,NA
+Osteolaemus tetraspis,African Dwarf Crocodile,Vulnerable,U,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Peponocephala electra,Melon-headed Whale,Least Concern,U,Marine,MarineMam,0,0,NA
+Phoca largha,Spotted Seal,Least Concern,U,"Marine,Terrestrial",MarineMam,0,0,NA
+Phoca vitulina,Harbor Seal,Least Concern,U,"Marine,Freshwater,Terrestrial",MarineMam,0,0,NA
+Physeter macrocephalus,Sperm Whale,Vulnerable,U,Marine,MarineMam,0,0,NA
+Plesiobatis daviesi,Giant Stingaree,Least Concern,U,Marine,Elasmo,0,0,NA
+Prionace glauca,Blue Shark,Near Threatened,U,Marine,Elasmo,0,0,NA
+Pseudotriakis microdon,False Catshark,Least Concern,U,Marine,Elasmo,0,0,NA
+Pusa hispida,Ringed Seal,Least Concern,U,"Marine,Freshwater,Terrestrial",MarineMam,0,0,NA
+Python reticulatus,Reticulated Python,Least Concern,U,Terrestrial,ReptAmph,0,0,NA
+Regalecus russelii,Oarfish,Least Concern,U,Marine,Bony,0,0,NA
+Sander lucioperca,Pike-perch,Least Concern,U,Freshwater,Bony,0,0,NA
+Seriola dumerili,Greater Amberjack,Least Concern,U,Marine,Bony,0,0,NA
+Seriola hippos,Samson Fish,Least Concern,U,Marine,Bony,0,0,NA
+Silurus asotus,Amur catfish,Least Concern,U,Freshwater,Bony,0,0,NA
+Silurus glanis,Wels Catfish,Least Concern,U,Freshwater,Bony,0,0,NA
+Somniosus microcephalus,Greenland Shark,Near Threatened,U,Marine,Elasmo,0,0,NA
+Sphyraena afra,Guinean Barracuda,Least Concern,U,Marine,Bony,0,0,NA
+Sphyraena barracuda,Great Barracuda,Least Concern,U,Marine,Bony,0,0,NA
+Steno bredanensis,Rough-toothed Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Stereolepis gigas,Giant Sea Bass,Critically Endangered,U,Marine,Bony,0,0,NA
+Trachipterus trachypterus,Mediterranean Dealfish,Least Concern,U,Marine,Bony,0,0,NA
+Tursiops truncatus,Common Bottlenose Dolphin,Least Concern,U,Marine,MarineMam,0,0,NA
+Varanus exanthematicus,Savannah Monitor,Least Concern,U,Terrestrial,ReptAmph,0,0,NA
+Varanus komodoensis,Komodo Dragon,Vulnerable,U,Terrestrial,ReptAmph,0,0,NA
+Varanus salvadorii,Crocodile Monitor,Least Concern,U,Terrestrial,ReptAmph,0,0,NA
+Ziphius cavirostris,Cuvier's Beaked Whale,Least Concern,U,Marine,MarineMam,0,0,NA
+Psephurus gladius,Chinese Paddlefish,Critically Endangered,U,"Marine,Freshwater",Bony,0,0,NA
+Crocodylus novaeguineae,New Guinea Crocodile,Least Concern,U,"Freshwater,Terrestrial",ReptAmph,0,0,NA
+Crocodylus porosus,Salt-water Crocodile,Least Concern,U,"Marine,Freshwater,Terrestrial",ReptAmph,0,0,NA
+Sphyrna lewini,Scalloped Hammerhead,Endangered,U,Marine,Elasmo,0,0,non-genuine
+Orectolobus maculatus,Spotted Wobbegong,Least Concern,U,Marine,Elasmo,0,0,non-genuine
+Delphinapterus leucas,Beluga,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Latimeria chalumnae,Coelacanth,Critically Endangered,U,Marine,Bony,0,0,non-genuine
+Carcharhinus limbatus,Blacktip Shark,Near Threatened,U,Marine,Elasmo,0,0,non-genuine
+Carcharias taurus,Sand Tiger Shark,Vulnerable,U,Marine,Elasmo,0,0,non-genuine
+Hexanchus griseus,Bluntnose Sixgill Shark,Near Threatened,U,Marine,Elasmo,0,0,non-genuine
+Cystophora cristata,Hooded Seal,Vulnerable,U,"Marine,Terrestrial",MarineMam,0,0,non-genuine
+Odobenus rosmarus,Walrus,Vulnerable,U,"Marine,Terrestrial",MarineMam,0,0,non-genuine
+Pseudorca crassidens,False Kille Whale,Near Threatened,U,NA,MarineMam,0,0,non-genuine
+Pusa caspica,Caspian Seal,Endangered,U,"Freshwater,Terrestrial",LandMam,0,0,non-genuine
+Balaenoptera acutorostrata,Common Minke Whale,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Hyperoodon planifrons,Southern Bottlenose Whale,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Monodon monoceros,Narwhal,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Phocoenoides dalli,Dall's Porpoise,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Stenella attenuata,Pantropical Spotted Dolphin,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Stenella coeruleoalba,Striped Dolphin,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Phocoena phocoena,Harbour Porpoise,Least Concern,U,Marine,MarineMam,0,0,non-genuine
+Lynx pardinus,Iberian lynx,Endangered,Increasing,Terrestrial,LandMam,1,1,genuine
+Arctocephalus philippii,Juan Fernández Fur Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,1,1,genuine
+Arctocephalus townsendi,Guadalupe Fur Seal,Least Concern,Increasing,"Marine,Terrestrial",MarineMam,1,1,genuine
+Haliaeetus albicilla,White-tailed Sea-eagle,Least Concern,Increasing,"Marine,Freshwater,Terrestrial",Birds,1,1,genuine
+Balaenoptera physalus,Fin Whale,Vulnerable,Increasing,Marine,MarineMam,1,1,genuine
+Balaena mysticetus,Bowhead Whale,Least Concern,Increasing,Marine,MarineMam,1,1,genuine
+Eschrichtius robustus,Gray Whale,Least Concern,Stable,Marine,MarineMam,1,1,genuine
+Dipturus innominatus,Smooth Skate,Least Concern,Stable,Marine,Elasmo,1,1,genuine
+Eubalaena australis,Southern Right Whale,Least Concern,U,Marine,MarineMam,1,1,genuine
+Eumetopias jubatus,Steller Sea Lion,Near Threatened,Increasing,"Marine,Terrestrial",MarineMam,2,2,genuine
+Megaptera novaeangliae,Humpback Whale,Least Concern,Increasing,Marine,MarineMam,2,2,genuine
+Melanosuchus niger,Black Caiman,Near Threatened,U,"Freshwater,Terrestrial",ReptAmph,2,2,genuine

@@ -1,0 +1,363 @@
+Binomial,Common,Status,Trend,System,Taxon,Delta_Status,Status_Impr
+Sarcogyps calvus,Red-headed Vulture,CR,Decreasing,Terrestrial,Birds,-4,Declined
+Gyps africanus,White-backed Vulture,CR,Decreasing,"Freshwater,Terrestrial",Birds,-3,Declined
+Gyps rueppelli,R<9f>ppell's Vulture,CR,Decreasing,Terrestrial,Birds,-3,Declined
+Aquila nipalensis,Steppe Eagle,EN,Decreasing,Terrestrial,Birds,-3,Declined
+Neophoca cinerea,Australian Sea Lion,EN,Decreasing,"Marine,Terrestrial",MarineMam,-3,Declined
+Neophron percnopterus,Egyptian Vulture,EN,Decreasing,"Freshwater,Terrestrial",Birds,-3,Declined
+Trigonoceps occipitalis,White-headed Vulture,CR,Decreasing,Terrestrial,Birds,-2,Declined
+Necrosyrtes monachus,Hooded Vulture,CR,Decreasing,"Freshwater,Terrestrial",Birds,-1,Declined
+Arctocephalus galapagoensis,Galapagos Fur Seal,EN,Decreasing,"Marine,Terrestrial",MarineMam,-1,Declined
+Polemaetus bellicosus,Martial Eagle,VU,Decreasing,"Freshwater,Terrestrial",Birds,-1,Declined
+Gyps coprotheres,Cape Vulture,EN,Decreasing,Terrestrial,Birds,-1,Declined
+Milvus milvus,Red Kite,NT,Decreasing,Terrestrial,Birds,-1,Declined
+Phocarctos hookeri,New Zealand Sea Lion,EN,Decreasing,"Marine,Terrestrial",MarineMam,-1,Declined
+Spizaetus ornatus,Ornate Hawk-eagle,NT,Decreasing,Terrestrial,Birds,-1,Declined
+Zalophus wollebaeki,Galápagos Sea Lion,EN,Decreasing,"Marine,Terrestrial",MarineMam,-1,Declined
+Huso dauricus,Kaluga,CR,Decreasing,"Marine,Freshwater",Bony,-1,Declined
+Huso huso,Beluga,CR,Decreasing,"Marine,Freshwater",Bony,-1,Declined
+Hyporthodus ergastularius,Sevenbar Grouper,NT,Decreasing,Marine,Bony,-1,Declined
+Thunnus albacares,Yellowfin Tuna,NT,Decreasing,Marine,Bony,-1,Declined
+Torgos tracheliotos,Lappet-faced Vulture,EN,Decreasing,Terrestrial,Birds,-1,Declined
+Panthera pardus,Leopard,VU,Decreasing,Terrestrial,LandMam,-1,Declined
+Gavialis gangeticus,Gharial,CR,Increasing,"Freshwater,Terrestrial",ReptAmph,-1,Declined
+Crocodylus rhombifer,Cuban Crocodile,CR,U,"Freshwater,Terrestrial",ReptAmph,-1,Declined
+Aaptosyax grypus,Mekong Giant Salmon Carp,CR,Decreasing,Freshwater,Bony,0,Unchanged
+Accipiter henstii,Henst's Goshawk,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Acinonyx jubatus,Cheetah,VU,Decreasing,Terrestrial,LandMam,0,Unchanged
+Aegypius monachus,Cinereous Vulture,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Aetobatus narinari,Spotted Eagle Ray,NT,Decreasing,Marine,Elasmo,0,Unchanged
+Alopias pelagicus,Pelagic Thresher,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Alopias superciliosus,Bigeye Thresher Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Alopias vulpinus,Common Thresher Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Andrias davidianus,Chinese Giant Salamander,CR,Decreasing,Freshwater,ReptAmph,0,Unchanged
+Aquila africana,Cassin's Hawk-eagle,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Aquila fasciata,Bonelli's Eagle,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Aquila heliaca,Eastern Imperial Eagle,VU,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Aquila spilogaster,African Hawk-eagle,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Arctocephalus gazella,Antarctic Fur Seal,LC,Decreasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Bubo bubo,Eurasian Eagle-owl,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Buteogallus schistaceus,Slate-colored Hawk,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Callorhinus ursinus,Northern Fur Seal,VU,Decreasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Canis rufus,Red Wolf,CR,Decreasing,Terrestrial,LandMam,0,Unchanged
+Carcharhinus signatus,Night Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Cathartes melambrotus,Greater Yellow-headed Vulture,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Cephalorhynchus eutropia,Chilean Dolphin,NT,Decreasing,"Marine,Freshwater",MarineMam,0,Unchanged
+Circaetus beaudouini,Beaudouin's Snake-eagle,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Circaetus cinereus,Brown Snake-eagle,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Circaetus fasciolatus,Southern Banded Snake-eagle,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Clanga hastata,Indian Spotted Eagle,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Crocodylus intermedius,Orinoco Crocodile,CR,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Crocodylus mindorensis,Philippine Crocodile,CR,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Crocodylus siamensis,Siamese Crocodile,CR,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Cyclura cornuta,Rhinoceros Iguana,VU,Decreasing,Terrestrial,ReptAmph,0,Unchanged
+Cyclura stejnegeri,Mona Rhinoceros Iguana,EN,Decreasing,Terrestrial,ReptAmph,0,Unchanged
+Eubalaena glacialis,North Atlantic Right Whale,EN,Decreasing,Marine,MarineMam,0,Unchanged
+Galeocerdo cuvier,Tiger Shark,NT,Decreasing,Marine,Elasmo,0,Unchanged
+Gymnura altavela,Spiny Butterfly Ray,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Gyps indicus,Indian Vulture,CR,Decreasing,Terrestrial,Birds,0,Unchanged
+Gyps tenuirostris,Slender-billed Vulture,CR,Decreasing,Terrestrial,Birds,0,Unchanged
+Haliaeetus leucogaster,White-bellied Sea-eagle,LC,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Haliaeetus pelagicus,Steller's Sea-eagle,VU,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Haliaeetus sanfordi,Sanford's Sea-eagle,VU,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Haliaeetus vociferoides,Madagascar Fish-eagle,CR,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Hamirostra melanosternon,Black-breasted Buzzard,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Harpia harpyja,Harpy Eagle,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Harpyopsis novaeguineae,Papuan Eagle,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Hemipristis elongata,Fossil Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Hucho taimen,Siberian Taimen,VU,Decreasing,Freshwater,Bony,0,Unchanged
+Ictinaetus malaiensis,Black Eagle,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Isurus paucus,Longfin Mako,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Kajikia albida,White Marlin,VU,Decreasing,Marine,Bony,0,Unchanged
+Kajikia audax,Striped Marlin,NT,Decreasing,Marine,Bony,0,Unchanged
+Ketupa zeylonensis,Brown Fish-owl,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Lates angustifrons,Tanganyika Lates,EN,Decreasing,Freshwater,Bony,0,Unchanged
+Lutjanus cyanopterus,Cubera Snapper,VU,Decreasing,Marine,Bony,0,Unchanged
+Makaira nigricans,Blue Marlin,VU,Decreasing,Marine,Bony,0,Unchanged
+Megalops atlanticus,Tarpon,VU,Decreasing,Marine,Bony,0,Unchanged
+Morelia spilota,Western Australian Carpet Python,LC,Decreasing,Terrestrial,ReptAmph,0,Unchanged
+Morphnarchus princeps,Barred Hawk,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Morphnus guianensis,Crested Eagle,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Mycteroperca bonaci,Black Grouper,NT,Decreasing,Marine,Bony,0,Unchanged
+Nebrius ferrugineus,Tawny Nurse Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Negaprion acutidens,Sharptooth Lemon Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Neofelis nebulosa,Clouded Leopard,VU,Decreasing,Terrestrial,LandMam,0,Unchanged
+Nisaetus cirrhatus,Changeable Hawk-eagle,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Nisaetus nipalensis,Mountain Hawk-eagle,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Nisaetus philippensis,North Philippine Hawk-eagle,EN,Decreasing,Terrestrial,Birds,0,Unchanged
+Odontaspis ferox,Smalltooth Sand Tiger,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Panthera leo,Lion,VU,Decreasing,Terrestrial,LandMam,0,Unchanged
+Panthera tigris,Tiger,EN,Decreasing,Terrestrial,LandMam,0,Unchanged
+Petrus rupestris,Red Steenbras,EN,Decreasing,Marine,Bony,0,Unchanged
+Pithecophaga jefferyi,Philippine Eagle,CR,Decreasing,Terrestrial,Birds,0,Unchanged
+Ptyas carinata,Keeled Rat Snake,LC,Decreasing,Terrestrial,ReptAmph,0,Unchanged
+Python bivittatus,Burmese Python,VU,Decreasing,Terrestrial,ReptAmph,0,Unchanged
+Rhynchobatus luebberti,African Wedgefish,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Rostroraja alba,White Skate,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Salmo marmoratus,NA,LC,Decreasing,Freshwater,Bony,0,Unchanged
+Sarcoramphus papa,King Vulture,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Scomberomorus commerson,Narrow-barred Spanish Mackerel,NT,Decreasing,Marine,Bony,0,Unchanged
+Scotopelia peli,Pel's Fishing-owl,LC,Decreasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Sphyrna mokarran,Great Hammerhead,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Spizaetus tyrannus,Black Hawk-eagle,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Strix leptogrammica,Brown Wood-owl,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Taeniurops meyeni,Blotched Fantail Ray,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Thunnus alalunga,Albacore Tuna,NT,Decreasing,Marine,Bony,0,Unchanged
+Thunnus obesus,Bigeye Tuna,VU,Decreasing,Marine,Bony,0,Unchanged
+Thunnus thynnus,Atlantic Bluefin Tuna,EN,Decreasing,Marine,Bony,0,Unchanged
+Totoaba macdonaldi,Totoaba,CR,Decreasing,"Marine,Freshwater",Bony,0,Unchanged
+Xiphias gladius,Swordfish,LC,Decreasing,Marine,Bony,0,Unchanged
+Bubo nipalensis,Spot-bellied Eagle-owl,LC,Decreasing,Terrestrial,Birds,0,Unchanged
+Gyps bengalensis,White-rumped Vulture,CR,Decreasing,Terrestrial,Birds,0,Unchanged
+Mecistops cataphractus,Slender-snouted Crocodile,CR,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Thunnus orientalis,Pacific Bluefin Tuna,VU,Decreasing,Marine,Bony,0,Unchanged
+Bubo shelleyi,Shelley's Eagle-owl,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Carcharhinus falciformis,Silky Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Epinephelus marginatus,Dusky Grouper,VU,Decreasing,Marine,Bony,0,Unchanged
+Carcharhinus albimarginatus,Silvertip Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Isurus oxyrinchus,Shortfin Mako,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Mycteroperca jordani,Gulf Grouper,EN,Decreasing,Marine,Bony,0,Unchanged
+Sciades parkeri,Gillbacker Sea Catfish,VU,Decreasing,"Marine,Freshwater",Bony,0,Unchanged
+Sphyrna zygaena,Smooth Hammerhead,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Aonyx congicus,Congo Clawless Otter,NT,Decreasing,"Freshwater,Terrestrial",LandMam,0,Unchanged
+Buteogallus solitarius,Black Solitary Eagle,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Carcharhinus plumbeus,Sandbar Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Gypaetus barbatus,Bearded Vulture,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Anoxypristis cuspidata,Narrow Sawfish,EN,Decreasing,Marine,Elasmo,0,Unchanged
+Ketupa flavipes,Tawny Fish-owl,LC,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Neomonachus schauinslandi,Hawaiian Monk Seal,EN,Decreasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Puma concolor,Puma,LC,Decreasing,Terrestrial,LandMam,0,Unchanged
+Carcharhinus obscurus,Dusky Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Epinephelus malabaricus,Malabar Grouper,LC,Decreasing,Marine,Bony,0,Unchanged
+Tomistoma schlegelii,False Gharial,VU,Decreasing,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Epinephelus itajara,Atlantic Goliath Grouper,VU,Decreasing,Marine,Bony,0,Unchanged
+Squatina squatina,Angelshark,CR,Decreasing,Marine,Elasmo,0,Unchanged
+Carcharhinus longimanus,Oceanic Whitetip Shark,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Pristis pectinata,Smalltooth Sawfish,CR,Decreasing,Marine,Elasmo,0,Unchanged
+Lamna nasus,Porbeagle,VU,Decreasing,Marine,Elasmo,0,Unchanged
+Andrias japonicus,Japanese Giant Salamander,NT,Decreasing,Freshwater,ReptAmph,0,Unchanged
+Aquila rapax,Tawny Eagle,VU,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Bubo scandiacus,Snowy Owl,VU,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Clanga clanga,Greater Spotted Eagle,VU,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Sagittarius serpentarius,Secretarybird,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Sousa teuszii,Atlantic Humpbacked Dolphin,CR,Decreasing,"Marine,Freshwater",MarineMam,0,Unchanged
+Aonyx capensis,African Clawless Otter,NT,Decreasing,"Marine,Freshwater,Terrestrial",LandMam,0,Unchanged
+Aquila gurneyi,Gurney's Eagle,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Buteogallus coronatus,Crowned Solitary Eagle,EN,Decreasing,Terrestrial,Birds,0,Unchanged
+Cuon alpinus,Dhole,EN,Decreasing,Terrestrial,LandMam,0,Unchanged
+Haliaeetus leucoryphus,Pallas's Fish-eagle,EN,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Lycaon pictus,African Wild Dog,EN,Decreasing,NA,LandMam,0,Unchanged
+Megatriorchis doriae,Doria's Goshawk,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Nesasio solomonensis,Fearful Owl,VU,Decreasing,Terrestrial,Birds,0,Unchanged
+Nisaetus floris,Flores Hawk-eagle,CR,Decreasing,Terrestrial,Birds,0,Unchanged
+Orcaella brevirostris,Irrawaddy Dolphin,EN,Decreasing,"Marine,Freshwater",MarineMam,0,Unchanged
+Pteronura brasiliensis,Giant Otter,EN,Decreasing,"Freshwater,Terrestrial",LandMam,0,Unchanged
+Sousa chinensis,Indo-Pacific Humpbacked Dolphin,VU,Decreasing,"Marine,Freshwater",MarineMam,0,Unchanged
+Stephanoaetus coronatus,Crowned Eagle,NT,Decreasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Terathopius ecaudatus,Bateleur,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Vultur gryphus,Andean Condor,NT,Decreasing,Terrestrial,Birds,0,Unchanged
+Canis simensis,Ethiopian Wolf,EN,Decreasing,Terrestrial,LandMam,0,Unchanged
+Crocuta crocuta,Spotted Hyaena,LC,Decreasing,Terrestrial,LandMam,0,Unchanged
+Panthera onca,Jaguar,NT,Decreasing,Terrestrial,LandMam,0,Unchanged
+Panthera uncia,Snow Leopard,VU,Decreasing,Terrestrial,LandMam,0,Unchanged
+Pardofelis marmorata,Marbled Cat,NT,Decreasing,Terrestrial,LandMam,0,Unchanged
+Aquila audax,Wedge-tailed Eagle,LC,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Arctocephalus australis,South American Fur Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Arctocephalus forsteri,New Zealand Fur Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Arctocephalus pusillus,Afro-Australian Fur Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Balaenoptera musculus,Blue Whale,EN,Increasing,Marine,MarineMam,0,Unchanged
+Buteo jamaicensis,Red-tailed Hawk,LC,Increasing,Terrestrial,Birds,0,Unchanged
+Caracara cheriway,Crested Caracara,LC,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Caracara plancus,Southern Caracara,LC,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Conger conger,Conger Eel,LC,Increasing,Marine,Bony,0,Unchanged
+Coragyps atratus,American Black Vulture,LC,Increasing,Terrestrial,Birds,0,Unchanged
+Crocodylus acutus,American Crocodile,VU,Increasing,"Marine,Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Gymnogyps californianus,California Condor,CR,Increasing,Terrestrial,Birds,0,Unchanged
+Gyps fulvus,Griffon Vulture,LC,Increasing,Terrestrial,Birds,0,Unchanged
+Haliaeetus leucocephalus,Bald Eagle,LC,Increasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Halichoerus grypus,Grey Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Ictalurus punctatus,Channel Catfish,LC,Increasing,Freshwater,Bony,0,Unchanged
+Lophaetus occipitalis,Long-crested Eagle,LC,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Mirounga angustirostris,Northern Elephant Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Pagophilus groenlandicus,Harp Seal,LC,Increasing,Marine,MarineMam,0,Unchanged
+Pandion haliaetus,Osprey,LC,Increasing,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Strix nebulosa,Great Grey Owl,LC,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Zalophus californianus,Californian Sea Lion,LC,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Buteo regalis,Ferruginous Hawk,LC,Increasing,Terrestrial,Birds,0,Unchanged
+Aquila adalberti,Spanish Imperial Eagle,VU,Increasing,"Freshwater,Terrestrial",Birds,0,Unchanged
+Balaenoptera borealis,Sei Whale,EN,Increasing,Marine,MarineMam,0,Unchanged
+Monachus monachus,Mediterranean Monk Seal,EN,Increasing,"Marine,Terrestrial",MarineMam,0,Unchanged
+Acanthocybium solandri,Wahoo,LC,Stable,Marine,Bony,0,Unchanged
+Alligator sinensis,Chinese Alligator,CR,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Apodora papuana,Papuan Olive Python,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Aquila chrysaetos,Golden Eagle,LC,Stable,Terrestrial,Birds,0,Unchanged
+Aquila verreauxii,Verreaux's Eagle,LC,Stable,Terrestrial,Birds,0,Unchanged
+Arctocephalus tropicalis,Subantarctic Fur Seal,LC,Stable,"Marine,Terrestrial",MarineMam,0,Unchanged
+Bubo ascalaphus,Pharaoh Eagle-owl,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Bubo bengalensis,Rock Eagle-owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Bubo capensis,Cape Eagle-owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Bubo lacteus,Verreaux's Eagle-owl,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Bubo magellanicus,Magellanic Horned Owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Bubo sumatranus,Barred Eagle-owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Bubo virginianus,Great Horned Owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Buteo augur,Augur Buzzard,LC,Stable,Terrestrial,Birds,0,Unchanged
+Buteo galapagoensis,Galapagos Hawk,VU,Stable,"Marine,Terrestrial",Birds,0,Unchanged
+Buteo hemilasius,Upland Buzzard,LC,Stable,Terrestrial,Birds,0,Unchanged
+Buteo rufinus,Long-legged Buzzard,LC,Stable,Terrestrial,Birds,0,Unchanged
+Buteo rufofuscus,Jackal Buzzard,LC,Stable,Terrestrial,Birds,0,Unchanged
+Buteo socotraensis,Socotra Buzzard,VU,Stable,Terrestrial,Birds,0,Unchanged
+Buteogallus urubitinga,Great Black Hawk,LC,Stable,Terrestrial,Birds,0,Unchanged
+Caiman crocodilus,Common Caiman,LC,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Carcharhinus tilstoni,Australian Blacktip Shark,LC,Stable,Marine,Elasmo,0,Unchanged
+Cathartes aura,Turkey Vulture,LC,Stable,Terrestrial,Birds,0,Unchanged
+Cathartes burrovianus,Lesser Yellow-headed Vulture,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Circaetus gallicus,Short-toed Snake-eagle,LC,Stable,Terrestrial,Birds,0,Unchanged
+Clanga pomarina,Lesser Spotted Eagle,LC,Stable,Terrestrial,Birds,0,Unchanged
+Crocodylus palustris,Mugger,VU,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Dendroaspis polylepis,Black Mamba,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Dolichophis jugularis,Large Whip Snake,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Dolichophis schmidti,Schmidt's Whip Snake,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Esox lucius,Northern Pike,LC,Stable,Freshwater,Bony,0,Unchanged
+Esox masquinongy,Muskellunge,LC,Stable,Freshwater,Bony,0,Unchanged
+Geranoaetus melanoleucus,Black-chested Buzzard-eagle,LC,Stable,Terrestrial,Birds,0,Unchanged
+Gypohierax angolensis,Palm-nut Vulture,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Haliaeetus vocifer,African Fish-eagle,LC,Stable,"Marine,Freshwater,Terrestrial",Birds,0,Unchanged
+Ketupa ketupu,Buffy Fish-owl,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Lamna ditropis,Salmon Shark,LC,Stable,Marine,Elasmo,0,Unchanged
+Lepisosteus osseus,Longnose Gar,LC,Stable,Freshwater,Bony,0,Unchanged
+Lycalopex culpaeus,Culpeo,LC,Stable,Terrestrial,LandMam,0,Unchanged
+Lynx rufus,Bobcat,LC,Stable,Terrestrial,LandMam,0,Unchanged
+Mirounga leonina,Southern Elephant Seal,LC,Stable,"Marine,Terrestrial",MarineMam,0,Unchanged
+Morelia amethistina,Amethystine Python,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Morelia bredli,Centralian Carpet Python,LC,Stable,Terrestrial,ReptAmph,0,Unchanged
+Otaria byronia,South American Sea Lion,LC,Stable,"Marine,Terrestrial",MarineMam,0,Unchanged
+Phalcoboenus australis,Striated Caracara,NT,Stable,"Marine,Terrestrial",Birds,0,Unchanged
+Polydactylus quadrifilis,Giant African threadfin,LC,Stable,Marine,Bony,0,Unchanged
+Ruvettus pretiosus,Oilfish,LC,Stable,Marine,Bony,0,Unchanged
+Seriola lalandi,Yellowtail Amberjack,LC,Stable,Marine,Bony,0,Unchanged
+Seriola rivoliana,Longfin Yellowtail,LC,Stable,Marine,Bony,0,Unchanged
+Strix seloputo,Spotted Wood-owl,LC,Stable,Terrestrial,Birds,0,Unchanged
+Tetrapturus belone,Mediterranean Shortbill Spearfish,LC,Stable,Marine,Bony,0,Unchanged
+Tetrapturus pfluegeri,Longbill Spearfish,LC,Stable,Marine,Bony,0,Unchanged
+Crocodylus johnstoni,Australian freshwater Crocodile,LC,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Crocodylus niloticus,Nile Crocodile,LC,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Lynx lynx,Eurasian Lynx,LC,Stable,Terrestrial,LandMam,0,Unchanged
+Ninox strenua,Powerful Owl,LC,Stable,"Freshwater,Terrestrial",Birds,0,Unchanged
+Crocodylus moreletii,Morelet's Crocodile,LC,Stable,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Parahyaena brunnea,Brown Hyaena,NT,Stable,Terrestrial,LandMam,0,Unchanged
+Buteo ventralis,Rufous-tailed Hawk,VU,Stable,Terrestrial,Birds,0,Unchanged
+Gyps himalayensis,Himalayan Griffon,NT,Stable,Terrestrial,Birds,0,Unchanged
+Falco rusticolus,Gyrfalcon,LC,Stable,"Marine,Terrestrial",Birds,0,Unchanged
+Pusa sibirica,Baikal Seal,LC,Stable,"Freshwater,Terrestrial",LandMam,0,Unchanged
+Canis lupus,Gray Wolf,LC,Stable,Terrestrial,LandMam,0,Unchanged
+Alligator mississippiensis,American Alligator,LC,U,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Argyrosomus hololepidotus,Madagascar Kob,EN,U,Marine,Bony,0,Unchanged
+Argyrosomus regius,Meagre,LC,U,Marine,Bony,0,Unchanged
+Bagrus docmak,Sudan Catfish,LC,U,Freshwater,Bony,0,Unchanged
+Benthodesmus tenuis,NA,LC,U,Marine,Bony,0,Unchanged
+Brachyplatystoma rousseauxii,Gilded Catfish,LC,U,Freshwater,Bony,0,Unchanged
+Caiman latirostris,Broad-snouted Caiman,LC,U,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Caiman yacare,Yacaré,LC,U,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Caracal caracal,Caracal,LC,U,Terrestrial,LandMam,0,Unchanged
+Caranx ignobilis,Giant Trevally,LC,U,Marine,Bony,0,Unchanged
+Carcharhinus brachyurus,Copper Shark,NT,U,"Marine,Freshwater",Elasmo,0,Unchanged
+Carcharhinus brevipinna,Spinner Shark,NT,U,Marine,Elasmo,0,Unchanged
+Carcharhinus galapagensis,Galapagos Shark,NT,U,Marine,Elasmo,0,Unchanged
+Carcharhinus leucas,Bull Shark,NT,U,"Marine,Freshwater",Elasmo,0,Unchanged
+Carcharodon carcharias,Great White Shark,VU,U,Marine,Elasmo,0,Unchanged
+Channa marulius,Great snakehead,LC,U,Freshwater,Bony,0,Unchanged
+Chitala lopis,Giant Featherback,LC,U,Freshwater,Bony,0,Unchanged
+Circaetus pectoralis,Black-chested Snake-eagle,LC,U,Terrestrial,Birds,0,Unchanged
+Delphinus delphis,Short-beaked Common Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Epinephelus tukula,Potato Grouper,LC,U,Marine,Bony,0,Unchanged
+Erignathus barbatus,Bearded Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Eubalaena japonica,North Pacific Right Whale,EN,U,Marine,MarineMam,0,Unchanged
+Feresa attenuata,Pygmy killer whale,LC,U,Marine,MarineMam,0,Unchanged
+Gadus morhua,Atlantic Cod,VU,U,Marine,Bony,0,Unchanged
+Grampus griseus,Risso's Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Gymnosarda unicolor,Dogtooth Tuna,LC,U,Marine,Bony,0,Unchanged
+Hippoglossus hippoglossus,Atlantic Halibut,EN,U,Marine,Bony,0,Unchanged
+Histriophoca fasciata,Ribbon Seal,LC,U,Marine,MarineMam,0,Unchanged
+Hucho hucho,Danube Salmon,EN,U,Freshwater,Bony,0,Unchanged
+Hydrurga leptonyx,Leopard Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Hyporthodus mystacinus,Misty Grouper,LC,U,Marine,Bony,0,Unchanged
+Istiophorus platypterus,Sailfish,LC,U,Marine,Bony,0,Unchanged
+Lagenodelphis hosei,Fraser's Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lagenorhynchus acutus,Atlantic White-sided Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lagenorhynchus albirostris,White-beaked Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lagenorhynchus cruciger,Hourglass Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lagenorhynchus obliquidens,Pacific White-sided Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lampris guttatus,Opah,LC,U,Marine,Bony,0,Unchanged
+Lates niloticus,Nile Perch,LC,U,Freshwater,Bony,0,Unchanged
+Leptonychotes weddellii,Weddell Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Liasis olivaceus,Olive Python,LC,U,Terrestrial,ReptAmph,0,Unchanged
+Lichia amia,Leerfish,LC,U,Marine,Bony,0,Unchanged
+Lissodelphis borealis,Northern Right Whale Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Lobodon carcinophaga,Crabeater Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Maccullochella peelii,Murray River Cod,CR,U,Freshwater,Bony,0,Unchanged
+Mitsukurina owstoni,Goblin Shark,LC,U,Marine,Elasmo,0,Unchanged
+Morone saxatilis,Striped Bass,LC,U,"Marine,Freshwater",Bony,0,Unchanged
+Negaprion brevirostris,Lemon Shark,NT,U,"Marine,Freshwater",Elasmo,0,Unchanged
+Ommatophoca rossii,Ross Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Ophichthus ophis,Spotted Snake Eel,LC,U,Marine,Bony,0,Unchanged
+Ophisurus serpens,Serpent Eel,LC,U,Marine,Bony,0,Unchanged
+Osteolaemus tetraspis,African Dwarf Crocodile,VU,U,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Peponocephala electra,Melon-headed Whale,LC,U,Marine,MarineMam,0,Unchanged
+Phoca largha,Spotted Seal,LC,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Phoca vitulina,Harbor Seal,LC,U,"Marine,Freshwater,Terrestrial",MarineMam,0,Unchanged
+Physeter macrocephalus,Sperm Whale,VU,U,Marine,MarineMam,0,Unchanged
+Plesiobatis daviesi,Giant Stingaree,LC,U,Marine,Elasmo,0,Unchanged
+Prionace glauca,Blue Shark,NT,U,Marine,Elasmo,0,Unchanged
+Pseudotriakis microdon,False Catshark,LC,U,Marine,Elasmo,0,Unchanged
+Pusa hispida,Ringed Seal,LC,U,"Marine,Freshwater,Terrestrial",MarineMam,0,Unchanged
+Python reticulatus,Reticulated Python,LC,U,Terrestrial,ReptAmph,0,Unchanged
+Regalecus russelii,Oarfish,LC,U,Marine,Bony,0,Unchanged
+Sander lucioperca,Pike-perch,LC,U,Freshwater,Bony,0,Unchanged
+Seriola dumerili,Greater Amberjack,LC,U,Marine,Bony,0,Unchanged
+Seriola hippos,Samson Fish,LC,U,Marine,Bony,0,Unchanged
+Silurus asotus,Amur catfish,LC,U,Freshwater,Bony,0,Unchanged
+Silurus glanis,Wels Catfish,LC,U,Freshwater,Bony,0,Unchanged
+Somniosus microcephalus,Greenland Shark,NT,U,Marine,Elasmo,0,Unchanged
+Sphyraena afra,Guinean Barracuda,LC,U,Marine,Bony,0,Unchanged
+Sphyraena barracuda,Great Barracuda,LC,U,Marine,Bony,0,Unchanged
+Steno bredanensis,Rough-toothed Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Stereolepis gigas,Giant Sea Bass,CR,U,Marine,Bony,0,Unchanged
+Trachipterus trachypterus,Mediterranean Dealfish,LC,U,Marine,Bony,0,Unchanged
+Tursiops truncatus,Common Bottlenose Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Varanus exanthematicus,Savannah Monitor,LC,U,Terrestrial,ReptAmph,0,Unchanged
+Varanus komodoensis,Komodo Dragon,VU,U,Terrestrial,ReptAmph,0,Unchanged
+Varanus salvadorii,Crocodile Monitor,LC,U,Terrestrial,ReptAmph,0,Unchanged
+Ziphius cavirostris,Cuvier's Beaked Whale,LC,U,Marine,MarineMam,0,Unchanged
+Psephurus gladius,Chinese Paddlefish,CR,U,"Marine,Freshwater",Bony,0,Unchanged
+Crocodylus novaeguineae,New Guinea Crocodile,LC,U,"Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Crocodylus porosus,Salt-water Crocodile,LC,U,"Marine,Freshwater,Terrestrial",ReptAmph,0,Unchanged
+Sphyrna lewini,Scalloped Hammerhead,EN,U,Marine,Elasmo,0,Unchanged
+Orectolobus maculatus,Spotted Wobbegong,LC,U,Marine,Elasmo,0,Unchanged
+Delphinapterus leucas,Beluga,LC,U,Marine,MarineMam,0,Unchanged
+Latimeria chalumnae,Coelacanth,CR,U,Marine,Bony,0,Unchanged
+Carcharhinus limbatus,Blacktip Shark,NT,U,Marine,Elasmo,0,Unchanged
+Carcharias taurus,Sand Tiger Shark,VU,U,Marine,Elasmo,0,Unchanged
+Hexanchus griseus,Bluntnose Sixgill Shark,NT,U,Marine,Elasmo,0,Unchanged
+Cystophora cristata,Hooded Seal,VU,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Odobenus rosmarus,Walrus,VU,U,"Marine,Terrestrial",MarineMam,0,Unchanged
+Pseudorca crassidens,False Kille Whale,NT,U,NA,MarineMam,0,Unchanged
+Pusa caspica,Caspian Seal,EN,U,"Freshwater,Terrestrial",LandMam,0,Unchanged
+Balaenoptera acutorostrata,Common Minke Whale,LC,U,Marine,MarineMam,0,Unchanged
+Hyperoodon planifrons,Southern Bottlenose Whale,LC,U,Marine,MarineMam,0,Unchanged
+Monodon monoceros,Narwhal,LC,U,Marine,MarineMam,0,Unchanged
+Phocoenoides dalli,Dall's Porpoise,LC,U,Marine,MarineMam,0,Unchanged
+Stenella attenuata,Pantropical Spotted Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Stenella coeruleoalba,Striped Dolphin,LC,U,Marine,MarineMam,0,Unchanged
+Phocoena phocoena,Harbour Porpoise,LC,U,Marine,MarineMam,0,Unchanged
+Lynx pardinus,Iberian lynx,EN,Increasing,Terrestrial,LandMam,1,Improved
+Arctocephalus philippii,Juan Fernández Fur Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,1,Improved
+Arctocephalus townsendi,Guadalupe Fur Seal,LC,Increasing,"Marine,Terrestrial",MarineMam,1,Improved
+Haliaeetus albicilla,White-tailed Sea-eagle,LC,Increasing,"Marine,Freshwater,Terrestrial",Birds,1,Improved
+Balaenoptera physalus,Fin Whale,VU,Increasing,Marine,MarineMam,1,Improved
+Balaena mysticetus,Bowhead Whale,LC,Increasing,Marine,MarineMam,1,Improved
+Eschrichtius robustus,Gray Whale,LC,Stable,Marine,MarineMam,1,Improved
+Dipturus innominatus,Smooth Skate,LC,Stable,Marine,Elasmo,1,Improved
+Eubalaena australis,Southern Right Whale,LC,U,Marine,MarineMam,1,Improved
+Eumetopias jubatus,Steller Sea Lion,NT,Increasing,"Marine,Terrestrial",MarineMam,2,Improved
+Megaptera novaeangliae,Humpback Whale,LC,Increasing,Marine,MarineMam,2,Improved
+Melanosuchus niger,Black Caiman,NT,U,"Freshwater,Terrestrial",ReptAmph,2,Improved
